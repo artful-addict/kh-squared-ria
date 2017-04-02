@@ -1,0 +1,12 @@
+//// Navbar Brand
+
+%navbar-brand {
+	height: auto;
+	width: 32px;
+	padding: 0;
+	display: inline-block;
+}
+
+.navbar-brand>img {
+	@extend %navbar-brand;
+}

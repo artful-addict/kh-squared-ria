@@ -1,0 +1,60 @@
+#hero-contact {
+	background-image: url('../img/stock/AdobeStock_78228825.jpeg');
+	background-color: transparent;
+
+	/* lt ie8 */
+	-ms-background-position-x: center;
+  -ms-background-position-y: bottom;
+  		background-position: center bottom;
+
+  /* scale bg image proportionately */
+  background-size: cover;
+
+  /* ie8 workaround - http://louisremi.github.io/background-size-polyfill/ */
+  -ms-behavior: url(https://cdn.css-tricks.com/backgroundsize.min.htc);
+  /* prevent scaling past src width (or not) */
+  /* max-width: 1200px; */
+
+  background-position-y: -267px;
+
+  &.bp-image {
+		@include respond-to('small') {
+			height: 320px;
+		}
+
+		@include respond-to('medium') {
+			height: 400px;
+		}
+
+		@include respond-to('large') {
+			height: 655px;
+		}
+
+  	height: 240px;
+  	width: 100%;
+	}
+}
+
+#contact > .container {
+	background-color: transparent;
+}
+
+.contact-page > .panel {
+	position: absolute;
+	top: 360px;
+}
+
+.left-column,
+.right-column {
+	float: left;
+	display: inline-block;
+	padding: 0 20px;
+}
+
+.left-column {
+	width: 70%
+}
+
+.right-column {
+	width: 30%;
+}

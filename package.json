@@ -1,32 +1,33 @@
 {
-  "name": "rwd-starter-kit",
+  "name": "kh-squared-ria",
   "version": "1.0.0",
-  "description": "Web design starter kit",
+  "description": "This is just a simple website starter kit I created for my team at CEDR Systems to help out with the workflow of starting a new website project. It is also for best practice with developing a healthy medium between us designers and programmers as multiple people have their hands on any one project at a time.",
   "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7",
+    "compass-mixins": "^0.12.10",
+    "del": "^2.2.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.1.0",
+    "gulp": "^3.9.1",
+    "jquery": "^3.2.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/artful-addict/rwd-starter-kit.git"
+    "url": "git+https://github.com/artful-addict/kh-squared-ria.git"
   },
   "author": "Kevin Akins",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/artful-addict/rwd-starter-kit/issues"
+    "url": "https://github.com/artful-addict/kh-squared-ria/issues"
   },
-  "homepage": "https://github.com/artful-addict/rwd-starter-kit#readme",
-  "devDependencies": {
-    "bootstrap": "^3.3.7",
-    "bootstrap-sass": "^3.3.7",
-    "compass-mixins": "^0.12.10",
-    "del": "^2.2.2",
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.4.1",
-    "gulp-uglify": "^2.1.0",
-    "jquery": "^3.2.0"
-  }
+  "homepage": "https://github.com/artful-addict/kh-squared-ria#readme"
 }

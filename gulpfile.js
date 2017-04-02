@@ -10,7 +10,7 @@ var			gulp = require('gulp'),
 
 gulp.task("concatScripts", function() {
 	return gulp.src([
-					'node_modules/bootstrap-sass/javascripts/bootstrap.js',
+					'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
 					'js/main.js'])
 		.pipe(maps.init())
 		.pipe(concat('app.js'))
@@ -49,7 +49,7 @@ gulp.task("clean", function() {
 });
 
 gulp.task("build", ['minifyScripts', 'compileSass'], function() {
-	return gulp.src(['css/styles.css', 'js/app.min.js', 'index.html', 'img/**'], { base: './'})
+	return gulp.src(['css/styles.css', 'js/app.min.js', 'index.html', 'contact/**', 'img/**'], { base: './'})
 		.pipe(gulp.dest('dist'))
 });
 

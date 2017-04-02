@@ -1,0 +1,98 @@
+.bp-image {
+  height: 240px;
+  width: 100%; }
+  @media (min-width: 768px) {
+    .bp-image {
+      height: 320px; } }
+  @media (min-width: 993px) {
+    .bp-image {
+      height: 400px; } }
+  @media (min-width: 1200px) {
+    .bp-image {
+      height: 588px; } }
+
+#hero {
+  background-image: url("../img/stock/AdobeStock_121563629.jpeg");
+  background-color: transparent;
+  background-repeat: no-repeat;
+  /* lt ie8 */
+  -ms-background-position-x: center;
+  -ms-background-position-y: bottom;
+  background-position: center bottom;
+  /* scale bg image proportionately */
+  background-size: cover;
+  /* ie8 workaround - http://louisremi.github.io/background-size-polyfill/ */
+  -ms-behavior: url(https://cdn.css-tricks.com/backgroundsize.min.htc);
+  /* prevent scaling past src width (or not) */
+  /* max-width: 1200px; */ }
+
+.navbar-brand > img {
+  height: auto;
+  width: 32px;
+  padding: 0;
+  display: inline-block; }
+
+.navbar-nav {
+  float: left; }
+  @media (min-width: 768px) {
+    .navbar-nav {
+      float: right; } }
+  @media (min-width: 993px) {
+    .navbar-nav {
+      float: right; } }
+  @media (min-width: 1200px) {
+    .navbar-nav {
+      float: right; } }
+
+#keith_her .portrait,
+#koobmeng_her .portrait {
+  width: 230px;
+  height: 230px; }
+
+#hero-contact {
+  background-image: url("../img/stock/AdobeStock_78228825.jpeg");
+  background-color: transparent;
+  /* lt ie8 */
+  -ms-background-position-x: center;
+  -ms-background-position-y: bottom;
+  background-position: center bottom;
+  /* scale bg image proportionately */
+  background-size: cover;
+  /* ie8 workaround - http://louisremi.github.io/background-size-polyfill/ */
+  -ms-behavior: url(https://cdn.css-tricks.com/backgroundsize.min.htc);
+  /* prevent scaling past src width (or not) */
+  /* max-width: 1200px; */
+  background-position-y: -267px; }
+  #hero-contact.bp-image {
+    height: 240px;
+    width: 100%; }
+    @media (min-width: 768px) {
+      #hero-contact.bp-image {
+        height: 320px; } }
+    @media (min-width: 993px) {
+      #hero-contact.bp-image {
+        height: 400px; } }
+    @media (min-width: 1200px) {
+      #hero-contact.bp-image {
+        height: 655px; } }
+
+#contact > .container {
+  background-color: transparent; }
+
+.contact-page > .panel {
+  position: absolute;
+  top: 360px; }
+
+.left-column,
+.right-column {
+  float: left;
+  display: inline-block;
+  padding: 0 20px; }
+
+.left-column {
+  width: 70%; }
+
+.right-column {
+  width: 30%; }
+
+/*# sourceMappingURL=styles.css.map */

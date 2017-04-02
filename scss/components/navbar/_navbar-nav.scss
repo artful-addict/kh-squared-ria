@@ -1,0 +1,15 @@
+.navbar-nav {
+	@include respond-to('small') {
+		float: right;
+	}
+
+	@include respond-to('medium') {
+		float: right;
+	}
+
+	@include respond-to('large') {
+		float: right;
+	}
+
+	float: left;
+}
