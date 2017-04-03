@@ -10,6 +10,15 @@
   @media (min-width: 1200px) {
     .bp-image {
       height: 588px; } }
+  .bp-image:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #2075AA, #0C2D41, #000000);
+    opacity: .6; }
 
 #hero {
   background-image: url("../img/stock/AdobeStock_121563629.jpeg");
@@ -25,12 +34,41 @@
   -ms-behavior: url(https://cdn.css-tricks.com/backgroundsize.min.htc);
   /* prevent scaling past src width (or not) */
   /* max-width: 1200px; */ }
+  #hero:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #2075AA, #0C2D41, #000000);
+    opacity: .6; }
 
 .navbar-brand > img {
   height: auto;
   width: 32px;
   padding: 0;
-  display: inline-block; }
+  display: inline-block;
+  margin-right: 1em; }
+
+.navbar-brand {
+  color: white; }
+  .navbar-brand:hover {
+    color: white; }
+
+.navbar-nav > li, .navbar-nav > li:active {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-left: 16px;
+  margin-right: 16px; }
+
+.navbar-nav > li:hover, .navbar-nav > li.active {
+  border-bottom: 3px solid white; }
+
+.nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 20px; }
 
 .navbar-nav {
   float: left; }
@@ -43,6 +81,32 @@
   @media (min-width: 1200px) {
     .navbar-nav {
       float: right; } }
+  .navbar-nav > li {
+    background-color: transparent; }
+    .navbar-nav > li:hover {
+      background-color: transparent; }
+    .navbar-nav > li.active a:hover {
+      background-color: trnasparent; }
+    .navbar-nav > li a:hover {
+      background-color: transparent; }
+    .navbar-nav > li a {
+      color: white; }
+      .navbar-nav > li a:hover {
+        color: white; }
+
+.navbar {
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease; }
 
 #keith_her .portrait,
 #koobmeng_her .portrait {
@@ -75,6 +139,15 @@
     @media (min-width: 1200px) {
       #hero-contact.bp-image {
         height: 655px; } }
+  #hero-contact:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #2075AA, #0C2D41, #000000);
+    opacity: .6; }
 
 #contact > .container {
   background-color: transparent; }
