@@ -39,104 +39,255 @@
   </head>
   <body>
     
-    <nav class="navbar navbar-fixed-top">
+    <nav class="navbar navbar-default" role="navigation">
 
         <div class="container">
 
             <div class="navbar-header">
 
-                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="fa fa-bars"></span>
-                </button>
+                <span type="button" class="fa fa-bars navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu"></span>
 
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="#">
+                    <img src="img/logos/logo-khsquared-alt.png" alt="KH-Squared Logo">
+                    <h1>KH&ndash;Squared</h1>
+                </a>
+            </div> <!-- /.navbar-header -->
 
-                    <img class="logo" src="img/logos/logo-khsquared-alt.png" alt="KH-Squared Logo">
-                     KH&ndash;Squared
-                </a> <!-- navbar-brand -->
-            </div> <!-- navbar-header -->
+            <div class="collapse navbar-collapse" id="nav-menu">
 
-            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
 
-                <ul class="nav navbar-nav">
-                    <li class="active">
-                        <a href="index.html">Overview</a>
-                    </li>
-                    <li>
-                        <a href="contact/contact.html">Contact</a>
-                    </li>
-                    <li>
-                        <a href="news/news.html">News</a>
+                    <li class="active"><a href="#">Contact</a></li>
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#">
+                            <span class="fa-stack">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
                     </li>
                 </ul> <!-- /.navbar-nav -->
-            </div> <!-- /#navbar /.navbar-collapse -->
-        </div> <!-- container -->
-    </nav> <!-- Navbar -->
-
-    <section id="hero" class="bp-image">
-
-        <div class="container">
-
+            </div> <!-- /#nav-menu -->
         </div> <!-- /.container -->
-    </section> <!-- /#hero -->
+    </nav> <!-- /nav -->
 
-    <section id="who_we_are">
+    <div id="hero" class="visible-xs">
 
         <div class="container">
 
-            <h2>Who We Are</h2>
-            <p>Our objective here at KH RIA is to develop innovative processes that will allow us to assist our clients who are seeking to register their investment advisory firm.</p>
+            <div class="row">
 
-            <p>Our team consists of former regulators and industry experts that have the experience to provide your firm the necessary guidance in this important first step of registration of your firm. We have the knowledge and background that will ensure your firm’s operations are compliant with regulatory agencies.</p>
+                <img class="logo" alt="KH-Squared Logo" src="img/logos/logo-khsquared-alt.png">
 
-            <p>At KH RIA, we specialize and assist our clients with registration in the jurisdiction in which they operate. Our services are curtailed to meet your individual needs. We stay current with the constant changes that occur in the industry and make it a priority to stay informed with those changes. Whether it be new legislation that has passed or streamlined operations that will impact our clients in the investment related industry, we have the solutions and will ensure we deliver it consistently to service the needs of our clients. We promise to provide unparalleled service to each and every one of our clients.</p>
-        </div>
-    </section> <!-- /#who_we_are -->
+                <span class="scroll-btn visible-xs">
 
+                    <a href="#overview">
+
+                        <span class="mouse">
+
+                            <span>
+                            </span>
+                        </span> <!-- /.mouse -->
+                    </a>
+                </span> <!-- /.scroll-btn /.visible -->
+
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </div> <!-- /#hero -->
+
+    <div id="contact" class="header">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-sm-8 col-sm-push-4">
+
+                    <form>
+
+                        <div class="row">
+
+                            <div class="col-sm-6">
+
+                                <div class="form-group">
+
+                                    <label class="sr-only" for="firstName">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                                </div>
+                            </div> <!-- /.col-sm-6 -->
+
+                            <div class="col-sm-6">
+
+                                <div class="form-group">
+
+                                    <label class="sr-only" for="lastName">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                                </div>
+                            </div> <!-- /.col-sm-6 -->
+                        </div> <!-- /.row -->
+
+                        <div class="row">
+
+                            <div class="col-sm-6">
+
+                                <div class="form-group">
+
+                                    <label class="sr-only" for="phoneNumber">Phone &#40;optional&#41;</label>
+                                    <input type="tel" class="form-control" id="phoneNumber" placeholder="Phone &#40;optional&#41;">
+                                </div>
+                            </div> <!-- /.col-sm-6 -->
+
+                            <div class="col-sm-6">
+
+                                <div class="form-group">
+
+                                    <label class="sr-only" for="emailAddress">E&ndash;mail</label>
+                                    <input type="email" class="form-control" id="emailAddress" placeholder="E&ndash;mail">
+                                </div>
+                            </div> <!-- /.col-sm-6 -->
+                        </div> <!-- /.row -->
+
+                        <div class="row">
+
+                            <div class="col-sm-12">
+
+                                <div class="form-group">
+
+                                    <label class="sr-only" for="subject">Subject</label>
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                </div>
+                            </div>
+                        </div> <!-- /.row -->
+
+                        <div class="row">
+
+                            <div class="col-sm-12">
+
+                                <div class="form-group">
+
+                                    <label class="sr-only" for="message">Message</label>
+                                    <textarea id="message" class="form-control" rows="3" placeholder="Message here..."></textarea>
+                                </div>
+                            </div>
+                        </div> <!-- /.row -->
+
+                        <div class="row">
+
+                            <div class="col-xs-12 col-sm-4">
+
+                                <div class="form-group">
+
+                                    <button type="submit" class="btn btn-primary btn-block">
+
+                                        <span class="fa fa-paper-plane"></span> <span class="text">Send</span>
+                                    </button>
+                                </div> <!-- /.form-group -->
+                            </div> <!-- /.col-xs-12 /.col-sm-4 -->
+                        </div> <!-- /.row -->
+                    </form> <!-- /form -->
+                </div> <!-- /.col-sm-4 -->
+
+                <div class="col-sm-4 col-sm-pull-8">
+
+                    <h2>Get In Touch</h2>
+
+                    <p>Give us a call, or send us a message.<br>Let’s get down to business.</p>
+
+                    <span class="fa fa-mobile"></span> <span>&#40;916&#41; 622&ndash;5250</span>
+
+                </div> <!-- /.col-sm-8 -->
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </div> <!-- /#contact /.header -->
+
+    <section id="overview">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-sm-12">
+
+                    <h2>Overview</h2>
+
+                    <p>Our objective here at KH RIA is to develop innovative processes that will allow us to assist our clients who are seeking to register their investment advisory firm.</p>
+
+                    <p>Our team consists of former regulators and industry experts that have the experience to provide your firm the necessary guidance in this important first step of registration of your firm. We have the knowledge and background that will ensure your firm’s operations are compliant with regulatory agencies.</p>
+
+                    <p>At KH RIA, we specialize and assist our clients with registration in the jurisdiction in which they operate. Our services are curtailed to meet your individual needs. We stay current with the constant changes that occur in the industry and make it a priority to stay informed with those changes. Whether it be new legislation that has passed or streamlined operations that will impact our clients in the investment related industry, we have the solutions and will ensure we deliver it consistently to service the needs of our clients. We promise to provide unparalleled service to each and every one of our clients.</p>
+
+                </div> <!-- /.col-sm-12 -->
+            </div> <!-- /.row -->
+        </div> <!-- /.container -->
+    </section> <!-- /#overview -->
+      
     <section id="services">
 
         <div class="container">
 
-            <h2>Services</h2>
-            <p>Our team here at KH Squared RIA of former regulators and industry experts will assist your firm in the process of registration in the jurisdiction that you will operate. We will guide your firm with the initial planning of your business and ensure that your firm’s registration process is seamless as possible so that you can focus your attention on other areas of your business. Our understanding of regulatory and compliance laws within the industry will allow us to work diligently without compromising efficiency. Included with our service, we will provide your firm with all of the required documents needed to be compliant with in jurisdiction that you operate.</p>
+            <div class="row">
 
-            <h3>KH Squared RIA Services</h3>
-            <p>Registration of State RIA&#58; &#36;1995</p>
+                <div class="col-sm-12">
+
+                    <h2>Services</h2>
+
+                    <p>Our team here at KH Squared RIA of former regulators and industry experts will assist your firm in the process of registration in the jurisdiction that you will operate. We will guide your firm with the initial planning of your business and ensure that your firm’s registration process is seamless as possible so that you can focus your attention on other areas of your business. Our understanding of regulatory and compliance laws within the industry will allow us to work diligently without compromising efficiency. Included with our service, we will provide your firm with all of the required documents needed to be compliant with in jurisdiction that you operate.</p>
+
+                    <p class="large">KH Squared RIA Services</p>
+
+                    <p>Registration of State RIA: $1995</p>
+                    
+                </div> <!-- /.col-sm-12 -->
+            </div> <!-- /.row -->
         </div> <!-- /.container -->
     </section> <!-- /#services -->
 
-    <section id="koobmeng_her">
+    <section id="about">
 
         <div class="container">
 
-            <h4 class="about-kh">Koobmeng Her</h4>
+            <div class="row">
 
-            <img class="portrait pull-left img-responsive img-circle" src="img/portraits/koobmeng_her.jpg" alt="Portrait of Koobmeng Her">
+                <div class="col-sm-3">
 
-            <p>Koobmeng&#40;Koo&#41; Her is the President and Chief Operating Officer at KH RIA. He brings a wealth of knowledge in the areas of registration, compliance operations, and audits of investment advisory firms from his experience as a former regulator with The State of California. Koo also holds a Master of Science in Accountancy from CSU Sacramento and is currently pursuing his CPA license. In  addition, he also holds the position of an Assistant Controller of an unrelated Sacramento based firm. Mr. Her also brings experience dealing with financial clients and their assets from his time as a bank manager. Koobmeng&#40;Koo&#41; Her prides himself in his work ethic and his clients are his top priority.</p>
+                    <h2>Koobmeng Her</h2>
+
+                    <img class="img-responsive img-circle" alt="Portrait of Koobmeng Her" src="img/portraits/koobmeng_her.jpg">
+                </div> <!-- /.col-sm-3 -->
+
+                <div class="col-sm-9">
+
+                    <p>Koobmeng&#40;Koo&#41; Her is the President and Chief Operating Officer at KH RIA. He brings a wealth of knowledge in the areas of registration, compliance operations, and audits of investment advisory firms from his experience as a former regulator with The State of California. Koo also holds a Master of Science in Accountancy from CSU Sacramento and is currently pursuing his CPA license. In  addition, he also holds the position of an Assistant Controller of an unrelated Sacramento based firm. Mr. Her also brings experience dealing with financial clients and their assets from his time as a bank manager. Koobmeng&#40;Koo&#41; Her prides himself in his work ethic and his clients are his top priority.</p>
+                </div> <!-- /.col-sm-9 -->
+            </div> <!-- /.row -->
+
+            <div class="row">
+
+                <div class="col-sm-3 col-sm-push-9">
+
+                    <h2>Keith Her</h2>
+
+                    <img class="img-responsive img-circle" alt="Portrait of Keith Her" src="img/portraits/keith_her.jpg">
+                </div> <!-- /.col-sm-3 /.col-sm-push-9 -->
+
+                <div class="col-sm-9 col-sm-pull-3">
+
+                    <p>Keith is a co-founder of KH2. As Chief Strategy Officer, he is in charge of the firm’s marketing and business development initiatives. He is a graduate of Fresno State University where he received his BA in Economics and is currently seeking his MBA at Western Governor’s University. In addition, he currently holds a position in K-12 public education as a System Sales Specialist, Marketing Analyst, and Social Media Consultant. He enjoys working with school leaders and making a difference for future generations. In his spare time, he enjoys hiking through the San Francisco Muir Woods, and developing new ideas to serve people better.</p>
+                </div> <!-- /.col-sm-9 /.col-sm-pull-3 -->
+            </div> <!-- /.row -->
         </div> <!-- /.container -->
-    </section> <!-- /#koobmeng_her -->
+    </section> <!-- /#about -->
 
-    <section id="keith_her">
+    <footer>
 
         <div class="container">
 
-            <h4 class="about-kh">Keith Her</h4>
-
-            <img class="portrait pull-right img-responsive img-circle" src="img/portraits/keith_her.jpg" alt="Portrait of Keith Her">
-
-            <p>Keith is a co-founder of KH2. As Chief Strategy Officer, he is in charge of the firm’s marketing and business development initiatives. He is a graduate of Fresno State University where he received his BA in Economics and is currently seeking his MBA at Western Governor’s University. In addition, he currently holds a position in K-12 public education as a System Sales Specialist, Marketing Analyst, and Social Media Consultant. He enjoys working with school leaders and making a difference for future generations. In his spare time, he enjoys hiking through the San Francisco Muir Woods, and developing new ideas to serve people better.</p>
+            <p class="small">KH&ndash;Squared RIA. Copyright &copy; 2017. All Rights Reserved.</p>
         </div> <!-- /.container -->
-    </section> <!-- /#keith_her -->
+    </footer> <!-- /footer -->
 
-    <div id="footer">
-
-        <div class="container">
-
-            <p class="small">KH&ndash;Squared RIA. &copy; 2017. All Rights Reserved.</p>
-        </div> <!-- /.container -->
-    </div> <!-- /#footer -->
-      
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/app.min.js"></script>
   </body>
