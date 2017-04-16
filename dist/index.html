@@ -1,294 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>KH-Squared RIA</title>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>KH-Squared RIA</title>
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="css/styles.css" rel="stylesheet">
-    <script src="https://use.fontawesome.com/dc56619f8a.js"></script>
+        <link href="css/styles.css" rel="stylesheet">
+        <script src="https://use.fontawesome.com/dc56619f8a.js"></script>
 
-    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
-    <link rel="manifest" href="img/favicons/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+        <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="img/favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+        <link rel="manifest" href="img/favicons/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,700" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
     
-    <nav class="navbar navbar-default" role="navigation">
+        <div class="navigation">
 
-        <div class="container">
+            <div class="container">
 
-            <div class="navbar-header">
+                <div class="navigation-header">
 
-                <span type="button" class="fa fa-bars navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu"></span>
+                    <div clas="row">
 
-                <a class="navbar-brand" href="#">
-                    <img src="img/logos/logo-khsquared-alt.png" alt="KH-Squared Logo">
-                    <h1>KH&ndash;Squared</h1>
-                </a>
-            </div> <!-- /.navbar-header -->
+                        <div class="navigation-brand">
 
-            <div class="collapse navbar-collapse" id="nav-menu">
+                            <img class="logo" alt="KH-Squared Logo" src="img/logos/logo-khsquared-alt.png">
 
-                <ul class="nav navbar-nav navbar-right">
+                            <h1 class="navigation-title">KH&ndash;Squared</h1>
+                        </div> <!-- /.navigation-brand -->
 
-                    <li class="active"><a href="#">Contact</a></li>
-                    <li><a href="#overview">Overview</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#">
-                            <span class="fa-stack">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                </ul> <!-- /.navbar-nav -->
-            </div> <!-- /#nav-menu -->
-        </div> <!-- /.container -->
-    </nav> <!-- /nav -->
+                        <span class="fa fa-bars toggle-nav" data-label="nav-menu" data-target="#nav-menu"></span>
 
-    <div id="hero" class="visible-xs">
+                        <span class="fa fa-envelope toggle-form" data-label="contact-form" data-target="#contact-form"></span>
 
-        <div class="container">
+                        <div id="nav-menu">
 
-            <div class="row">
+                            <span class="fa fa-minus toggle-nav" data-label="nav-menu" data-target="#nav-menu"></span>
 
-                <img class="logo" alt="KH-Squared Logo" src="img/logos/logo-khsquared-alt.png">
+                            <ul>
+                                <li><a href="#contact">Contact</a></li>
+                                <li><a href="#overview">Who We Are</a></li>
+                                <li><a href="#overview">Services</a></li>
+                                <li><a href="#overview">About</a></li>
+                            </ul> <!-- /#nav-menu -->
+                        </div> <!-- /#nav-menu -->
+                    </div> <!-- /.row -->
+                </div> <!-- /.navigation-header -->
+            </div> <!-- /.container -->
+        </div> <!-- /.navigation -->
 
-                <span class="scroll-btn visible-xs">
+        <div id="hero">
 
-                    <a href="#overview">
+            <img
+                sizes="50vw,
+                    (min-width: 1024px) 512px"
+                srcset="img/stock/background-@2x.jpg 2x,
+                        img/stock/background-@1x.jpg 1x"
+                src="img/stock/bg-img-@1x.jpeg"
+                alt="Hero Background Image"
+                class="bg-img"
+            />
 
-                        <span class="mouse">
+            <div class="container">
 
-                            <span>
-                            </span>
-                        </span> <!-- /.mouse -->
-                    </a>
-                </span> <!-- /.scroll-btn /.visible -->
+                <div class="row">
 
-            </div> <!-- /.row -->
-        </div> <!-- /.container -->
-    </div> <!-- /#hero -->
+                    <div class="col-sm-12">
 
-    <div id="contact" class="header">
+                        <img class="logo" src="img/logos/logo-khsquared-alt.png" alt="KH-Squared Logo">
+                    </div> <!-- /.col-sm-12 -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /#contact -->
 
-        <div class="container">
+        <div id="contact">
 
-            <div class="row">
+            <img
+                sizes="50vw,
+                    (min-width: 1024px) 512px"
+                srcset="img/stock/background-@2x.jpg 2x,
+                        img/stock/background-@1x.jpg 1x"
+                src="img/stock/bg-img-@1x.jpeg"
+                alt="Hero Background Image"
+                class="bg-img"
+            />
+            <div class="container">
 
-                <div class="col-sm-8 col-sm-push-4">
+                <div class="row">
 
-                    <form>
+                    <div class="col-sm-4">
 
-                        <div class="row">
+                        <h2>Get In Touch</h2>
 
-                            <div class="col-sm-6">
+                        <p>Give us a call, or send us a message.<br>Let’s get down to business.</p>
 
-                                <div class="form-group">
+                        <div class="contact-phone">
+                            <span class="fa fa-mobile"></span> <span class="phone-number">&#40;916&#41; 622&ndash;5250</span>
+                        </div>
+                    </div> <!-- /.one-third column -->
 
-                                    <label class="sr-only" for="firstName">First Name</label>
-                                    <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                    <div class="col-sm-8">
+
+                        <form id="contactForm" action="/whatever" method="post">
+
+                            <div class="row">
+
+                                <div class="col-sm-6">
+
+                                    <div class="form-group">
+
+                                        <label class="sr-only" for="firstName">First Name</label>
+                                        <input class="form-control" type="text" name="firstName" id="firstName" placeholder="First Name">
+                                    </div>
                                 </div>
-                            </div> <!-- /.col-sm-6 -->
 
-                            <div class="col-sm-6">
+                                <div class="col-sm-6">
 
-                                <div class="form-group">
+                                    <div class="form-group">
 
-                                    <label class="sr-only" for="lastName">Last Name</label>
-                                    <input type="text" class="form-control" id="lastName" placeholder="Last Name">
-                                </div>
-                            </div> <!-- /.col-sm-6 -->
-                        </div> <!-- /.row -->
-
-                        <div class="row">
-
-                            <div class="col-sm-6">
-
-                                <div class="form-group">
-
-                                    <label class="sr-only" for="phoneNumber">Phone &#40;optional&#41;</label>
-                                    <input type="tel" class="form-control" id="phoneNumber" placeholder="Phone &#40;optional&#41;">
-                                </div>
-                            </div> <!-- /.col-sm-6 -->
-
-                            <div class="col-sm-6">
-
-                                <div class="form-group">
-
-                                    <label class="sr-only" for="emailAddress">E&ndash;mail</label>
-                                    <input type="email" class="form-control" id="emailAddress" placeholder="E&ndash;mail">
-                                </div>
-                            </div> <!-- /.col-sm-6 -->
-                        </div> <!-- /.row -->
-
-                        <div class="row">
-
-                            <div class="col-sm-12">
-
-                                <div class="form-group">
-
-                                    <label class="sr-only" for="subject">Subject</label>
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                        <label class="sr-only" for="lastName">Last Name</label>
+                                        <input class="form-control" type="text" name="lastName" id="lastName" placeholder="Last Name">
+                                    </div>
                                 </div>
                             </div>
-                        </div> <!-- /.row -->
 
-                        <div class="row">
+                            <div class="row">
 
-                            <div class="col-sm-12">
+                                <div class="col-sm-6">
 
-                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="phoneNumber">Phone&#40;Optional&#41;</label>
+                                        <input class="form-control" type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone (Optional)">
+                                    </div>
+                                </div>
 
-                                    <label class="sr-only" for="message">Message</label>
-                                    <textarea id="message" class="form-control" rows="3" placeholder="Message here..."></textarea>
+                                <div class="col-sm-6">
+
+                                    <div class="form-group">
+                                        <label class="sr-only" for="emailAddress">E&ndash;mail</label>
+                                        <input class="form-control" type="email" name="emailAddress" id="emailAddress" placeholder="E-mail">
+                                    </div>
                                 </div>
                             </div>
-                        </div> <!-- /.row -->
 
-                        <div class="row">
+                            <div class="row">
 
-                            <div class="col-xs-12 col-sm-4">
+                                <div class="col-sm-12">
 
-                                <div class="form-group">
+                                    <div class="form-group">
 
-                                    <button type="submit" class="btn btn-primary btn-block">
+                                        <label class="sr-only" for="subject">Subject</label>
+                                        <input class="form-control" type="text" name="subject" id="subject" placeholder="Subject">
+                                    </div>
+                                </div>
+                            </div>
 
-                                        <span class="fa fa-paper-plane"></span> <span class="text">Send</span>
-                                    </button>
-                                </div> <!-- /.form-group -->
-                            </div> <!-- /.col-xs-12 /.col-sm-4 -->
-                        </div> <!-- /.row -->
-                    </form> <!-- /form -->
-                </div> <!-- /.col-sm-4 -->
+                            <div class="row">
 
-                <div class="col-sm-4 col-sm-pull-8">
+                                <div class="col-sm-12">
 
-                    <h2>Get In Touch</h2>
+                                    <textarea class="form-control" id="message" name="message" placeholder="Your Message Here..." row="1"></textarea>
+                                </div>
+                            </div>
 
-                    <p>Give us a call, or send us a message.<br>Let’s get down to business.</p>
+                            <div class="row">
 
-                    <span class="fa fa-mobile"></span> <span>&#40;916&#41; 622&ndash;5250</span>
+                                <div class="col-sm-12">
 
-                </div> <!-- /.col-sm-8 -->
-            </div> <!-- /.row -->
-        </div> <!-- /.container -->
-    </div> <!-- /#contact /.header -->
+                                    <input class="btn btn-primary btn-kh btn-lg" type="submit" value="Send">
+                                </div>
+                            </div>
+                        </form>
+                    </div> <!-- /.two-thirds column -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /.hero -->
 
-    <section id="overview">
+        <div class="tray">
 
-        <div class="container">
+            <div id="overview">
 
-            <div class="row">
+                <div class="container">
 
-                <div class="col-sm-12">
+                    <div class="row">
 
-                    <h2>Overview</h2>
+                        <div class="col-sm-12">
+                            
+                            <h2>Who We Are</h2>
 
-                    <p>Our objective here at KH RIA is to develop innovative processes that will allow us to assist our clients who are seeking to register their investment advisory firm.</p>
+                            <p>Our objective here at KH Squared RIA is to assist our clients with registration of their investment advisory firm. Our team consists of former regulators and industry experts that have the experience to provide your firm the necessary guidance in this important first step of registration of your firm. We have the knowledge and background that will ensure your firm’s operations are compliant with regulatory agencies. At KH Squared RIA, we specialize and assist our clients with registration in the jurisdiction in which they operate. Our services are curtailed to meet the individual needs of our clients. We stay current with the constant changes that occur in the industry and make it a priority to stay informed of those changes. Whether it be new legislation that has passed or streamlined operations that will impact our clients in the investment related industry, we have the solutions and will ensure that we communicate and apply it consistently to our services. We promise to provide unparalleled service to each and every one of our clients.</p>
 
-                    <p>Our team consists of former regulators and industry experts that have the experience to provide your firm the necessary guidance in this important first step of registration of your firm. We have the knowledge and background that will ensure your firm’s operations are compliant with regulatory agencies.</p>
+                            <p>We assure to you that the registration of your firm will be conducted in a timely manner and up to the regulatory standards of the jurisdiction in which you operate. We promise to provide exemplary service in which all requirements will be covered. We understand that your time is valuable. Let us help you in this process so that you can focus your attention on other areas of your business.</p>
+                        </div> <!-- /.twelve columns -->
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+            </div> <!-- /#overview -->
 
-                    <p>At KH RIA, we specialize and assist our clients with registration in the jurisdiction in which they operate. Our services are curtailed to meet your individual needs. We stay current with the constant changes that occur in the industry and make it a priority to stay informed with those changes. Whether it be new legislation that has passed or streamlined operations that will impact our clients in the investment related industry, we have the solutions and will ensure we deliver it consistently to service the needs of our clients. We promise to provide unparalleled service to each and every one of our clients.</p>
+            <div id="services">
 
-                </div> <!-- /.col-sm-12 -->
-            </div> <!-- /.row -->
-        </div> <!-- /.container -->
-    </section> <!-- /#overview -->
-      
-    <section id="services">
+                <div class="container">
 
-        <div class="container">
+                    <div class="row">
 
-            <div class="row">
+                        <div class="col-sm-12">
 
-                <div class="col-sm-12">
+                            <p>Our team here at KH Squared RIA will assist your firm in the process of registration in the jurisdiction in which you operate. We will provide guidance throughout the entire process including the initial planning up until when your firm is approved to operate. We will ensure that your firm's registration process is as seamless as possible so that you can focus your attention on other areas of your business. Our understanding of regulatory and compliance laws within the industry will allow us to work diligently without compromising efficiency. Included with our service, we will provide your firm with all of the required documents needed to be compliant within the jurisdiction that you operate.</p>
 
-                    <h2>Services</h2>
+                            <p class="special">KH Squared RIA Services</p>
+                            <p>Registration of State RIA&#58; &#36;1995</p>
+                        </div> <!-- /.twelve columns -->
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+            </div> <!-- /#services -->
 
-                    <p>Our team here at KH Squared RIA of former regulators and industry experts will assist your firm in the process of registration in the jurisdiction that you will operate. We will guide your firm with the initial planning of your business and ensure that your firm’s registration process is seamless as possible so that you can focus your attention on other areas of your business. Our understanding of regulatory and compliance laws within the industry will allow us to work diligently without compromising efficiency. Included with our service, we will provide your firm with all of the required documents needed to be compliant with in jurisdiction that you operate.</p>
+            <div id="about">
 
-                    <p class="large">KH Squared RIA Services</p>
+                <div class="container">
 
-                    <p>Registration of State RIA: $1995</p>
-                    
-                </div> <!-- /.col-sm-12 -->
-            </div> <!-- /.row -->
-        </div> <!-- /.container -->
-    </section> <!-- /#services -->
+                    <div class="row">
 
-    <section id="about">
+                        <div class="col-sm-3 portrait">
 
-        <div class="container">
+                            <h2>Koobmeng Her</h2>
 
-            <div class="row">
+                            <img src="img/portraits/koobmeng_her.jpg" alt="Portrait of Koobmeng Her" class="img-circle img-responsive">
+                        </div> <!-- /.three columns -->
 
-                <div class="col-sm-3">
+                        <div class="col-sm-9">
 
-                    <h2>Koobmeng Her</h2>
+                            <p>Koobmeng&#40;Koo&#41; Her is the President and Chief Operating Officer at KH RIA. He brings a wealth of knowledge in the areas of registration, compliance operations, and audits of investment advisory firms from his experience as a former regulator with The State of California. Koo also holds a Master of Science in Accountancy from CSU Sacramento and is currently pursuing his CPA license. In  addition, he also holds the position of an Assistant Controller of an unrelated Sacramento based firm. Mr. Her also brings experience dealing with financial clients and their assets from his time as a bank manager. Koobmeng&#40;Koo&#41; Her prides himself in his work ethic and his clients are his top priority.</p>
+                        </div> <!-- /.nine columns -->
+                    </div> <!-- /.row -->
 
-                    <img class="img-responsive img-circle" alt="Portrait of Koobmeng Her" src="img/portraits/koobmeng_her.jpg">
-                </div> <!-- /.col-sm-3 -->
+                    <div class="row">
 
-                <div class="col-sm-9">
+                        <div class="col-sm-9">
 
-                    <p>Koobmeng&#40;Koo&#41; Her is the President and Chief Operating Officer at KH RIA. He brings a wealth of knowledge in the areas of registration, compliance operations, and audits of investment advisory firms from his experience as a former regulator with The State of California. Koo also holds a Master of Science in Accountancy from CSU Sacramento and is currently pursuing his CPA license. In  addition, he also holds the position of an Assistant Controller of an unrelated Sacramento based firm. Mr. Her also brings experience dealing with financial clients and their assets from his time as a bank manager. Koobmeng&#40;Koo&#41; Her prides himself in his work ethic and his clients are his top priority.</p>
-                </div> <!-- /.col-sm-9 -->
-            </div> <!-- /.row -->
+                            <p>Keith is a co-founder of KH2. As Chief Strategy Officer, he is in charge of the firm’s marketing and business development initiatives. He is a graduate of Fresno State University where he received his BA in Economics and is currently seeking his MBA at Western Governor’s University. In addition, he currently holds a position in K&ndash;12 public education as a System Sales Specialist, Marketing Analyst, and Social Media Consultant. He enjoys working with school leaders and making a difference for future generations. In his spare time, he enjoys hiking through the San Francisco Muir Woods, and developing new ideas to serve people better.</p>
+                        </div> <!-- /.nine columns -->
 
-            <div class="row">
+                        <div class="col-sm-3 portrait">
 
-                <div class="col-sm-3 col-sm-push-9">
+                            <h2>Keith Her</h2>
 
-                    <h2>Keith Her</h2>
+                            <img src="img/portraits/keith_her.jpg" alt="Portrait of Keith Her" class="img-circle img-responsive">
+                        </div> <!-- /.three columns -->
+                    </div> <!-- /.row -->
+                </div> <!-- /.container -->
+            </div> <!-- /#about -->
+        </div> <!-- /.tray -->
 
-                    <img class="img-responsive img-circle" alt="Portrait of Keith Her" src="img/portraits/keith_her.jpg">
-                </div> <!-- /.col-sm-3 /.col-sm-push-9 -->
+        <div class="footer">
 
-                <div class="col-sm-9 col-sm-pull-3">
+            <div class="container">
 
-                    <p>Keith is a co-founder of KH2. As Chief Strategy Officer, he is in charge of the firm’s marketing and business development initiatives. He is a graduate of Fresno State University where he received his BA in Economics and is currently seeking his MBA at Western Governor’s University. In addition, he currently holds a position in K-12 public education as a System Sales Specialist, Marketing Analyst, and Social Media Consultant. He enjoys working with school leaders and making a difference for future generations. In his spare time, he enjoys hiking through the San Francisco Muir Woods, and developing new ideas to serve people better.</p>
-                </div> <!-- /.col-sm-9 /.col-sm-pull-3 -->
-            </div> <!-- /.row -->
-        </div> <!-- /.container -->
-    </section> <!-- /#about -->
+                <div class="row">
 
-    <footer>
+                    <div class="col-sm-12">
 
-        <div class="container">
-
-            <p class="small">KH&ndash;Squared RIA. Copyright &copy; 2017. All Rights Reserved.</p>
-        </div> <!-- /.container -->
-    </footer> <!-- /footer -->
+                        <p style="text-align: center;">K&ndash;H Squared RIA. &copy; 2017. All Rights Reserved.</p>
+                    </div> <!-- /.twelve columns -->
+                </div> <!-- /.row -->
+            </div> <!-- /.container -->
+        </div> <!-- /.footer -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/app.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.toggle-nav').on('click', function() {
+                $('#nav-menu').toggleClass('open');
+            });
+
+            $('.toggle-form').on('click', function() {
+                $('#contact-form').toggleClass('open');
+            });
+        });
+    </script>
   </body>
 </html>

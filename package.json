@@ -16,7 +16,9 @@
     "gulp": "^3.9.1",
     "jquery": "^3.2.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "skeleton-css": "^2.0.4"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

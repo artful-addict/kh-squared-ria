@@ -1,12 +1,4 @@
-@import 'navbar/module';
-@import 'forms';
 @import 'buttons';
-
-#keith_her,
-#koobmeng_her {
-
-	.portrait {
-		width: 230px;
-		height: 230px;
-	}
-}
+@import 'forms';
+@import 'img';
+@import 'navbar';

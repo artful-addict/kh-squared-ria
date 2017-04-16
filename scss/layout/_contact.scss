@@ -1,0 +1,26 @@
+#contact {
+	position: relative;
+	color: white;
+	font-size: 16px;
+	background-color: #114877;
+	padding-top: 60px;
+
+	.contact-phone {
+		position: relative;
+
+		.phone-number,
+		.fa-mobile {
+			position: absolute;
+		}
+		.phone-number {
+			font-size: 20px;
+			left: 32px;
+			top: 3px;
+		}
+
+		.fa-mobile {
+			font-size: 32px;
+			margin-right: 16px;
+		}
+	}
+}

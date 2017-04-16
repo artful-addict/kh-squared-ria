@@ -1,0 +1,196 @@
+@mixin overlay-color($bgcolor, $bgcolor-fallback) {
+	background-color: $bgcolor-fallback;
+	background-color: $bgcolor;
+}
+
+%overlay {
+	height: 100%;
+	width: 0;
+	position: fixed; // Stay in place
+	z-index: 1; // Sit on top
+	left: 0;
+	top: 0;
+	overflow-x: hidden; // Disable horizontal scroll
+}
+
+%navbar {
+	width: 100%;
+	height: 60px;
+	display: block;
+}
+
+%fixed-pos {
+	position: fixed;
+	left: 0;
+	top: 0;
+}
+.overlay {
+	@extend %overlay;
+	@include transition-duration(0.5s);
+	@include overlay-color($brand-primary, rgba($brand-primary, 0.9));
+}
+.navigation {
+	@extend %fixed-pos;
+	@extend %navbar;
+	@include transition-property(background-color);
+	@include transition-duration(0.5s);
+	@include transition-timing-function(ease);
+	background-color: transparent;
+	z-index: 2;
+}
+
+.navigation-brand > img.logo,
+.navigation-brand > h1.navigation-title {
+	display: none;
+
+	@include respond-to('small') {
+		display: inline-block;
+	}
+	@include respond-to('medium') {
+		display: inline-block;
+	}
+	@include respond-to('large') {
+		display: inline-block;
+	}
+}
+.navigation-title {
+	font-size: 20px;
+	color: white;
+	margin-bottom: 0;
+	margin-top: 15px;
+}
+.navigation-brand > img.logo {
+	width: 32px;
+	height: auto;
+	margin-top: 15px;
+	display: none;
+}
+
+.navigation-header {
+	display: block;
+
+	@include respond-to('small') {
+		display: block;
+	}
+	@include respond-to('medium') {
+		display: block;
+	}
+	@include respond-to('large') {
+		display: block;
+	}
+
+	.toggle-form {
+		font-size: 24px;
+		color: #FFF;
+		margin-top: 15px;
+		display: inline-block;
+	}
+
+	.toggle-nav {
+		
+		&[data-label="nav-menu"] {
+			float: left;
+		}
+
+		&[data-label="contact-form"] {
+			float: right;
+		}
+
+		@include respond-to('small') {
+			display: none;
+		}
+		@include respond-to('medium') {
+			display: none;
+		}
+		@include respond-to('large') {
+			display: none;
+		}
+	}
+
+	#nav-menu {
+		@include transition-property(display);
+		@include transition-duration(0.5s);
+		@include transition-timing-function(ease-in);
+		float: none;
+		display: none;
+		width: 100%;
+
+		&.open {
+			display: block;
+		}
+
+		@include respond-to('small') {
+			display: inline-block;
+			float: right;
+
+			ul {
+				padding-right: 0;
+				padding-left: auto;
+
+				li {
+					display: inline;
+					margin: 0 8px;
+				}
+			}
+		}
+		@include respond-to('medium') {
+			display: inline-block;
+			float: right;
+
+			ul {
+				padding-right: 0;
+				padding-left: auto;
+
+				li {
+					display: inline;
+					margin: 0 8px;
+				}
+			}
+		}
+		@include respond-to('large') {
+			display: inline-block;
+			float: right;
+
+			ul {
+				padding-right: 0;
+				padding-left: auto;
+
+				li {
+					display: inline;
+					margin: 0 8px;
+				}
+			}
+		}
+
+		ul {
+			list-style: none;
+			padding-left: 0;
+			padding-right: auto;
+
+			li {
+					display: block;
+					margin: 0;
+					width: 100%;
+					height: 50px;
+					font-size: 20px;
+
+					a {
+						@include transition-property(background-color);
+						@include transition-duration(0.5s);
+						@include transition-timing-function(ease);
+						color: white;
+						background-color: transparent;
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						text-decoration: none;
+
+						&:hover {
+							background-color: darken(#333, 20%);
+						}
+					}
+				}
+		}
+	}
+}
+
