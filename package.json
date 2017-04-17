@@ -17,6 +17,7 @@
     "jquery": "^3.2.0"
   },
   "devDependencies": {
+    "breakpoints-js": "^1.0.4",
     "skeleton-css": "^2.0.4"
   },
   "scripts": {

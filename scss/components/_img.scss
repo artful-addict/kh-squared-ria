@@ -1,6 +1,10 @@
 .bg-img {
-	max-width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
+	height: 715px;
+	width: 100%;
+	background-image: url('../../img/stock/background-@2x.jpg');
+	-ms-background-position-x: center;
+	-ms-background-position-y: bottom;
+	background-position: center bottom;
+	background-size: cover;
+	-ms-behavior: url(https://cdn.css-tricks.com/backgroundsize.min.htc);
 }

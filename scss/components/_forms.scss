@@ -1,3 +1,34 @@
+%form-gradient {
+	background:
+		linear-gradient(
+			to left,
+			rgba(32,117,170,1) 0%,
+			rgba(12,45,65, .7) 60%,
+			rgba(0,0,0,1) 100%
+		),
+		url('../../img/stock/background-@1x.jpg');
+	-ms-background-position-x: center;
+	-ms-background-position-y: bottom;
+		background-position: center bottom;
+	background-size: cover;
+	//-ms-behavior: url(background-size.min.htc);
+	background-position: 40% 60%;
+}
+
+#hero > #contact {
+	display: none;
+	padding-top: 207px;
+
+	@include respond-to('small') {
+		display: block;
+	}
+	@include respond-to('medium') {
+		display: block;
+	}
+	@include respond-to('large') {
+		display: block;
+	}
+}
 .form-control {
 	@include border-radius(0px);
 	background-color: transparent;
@@ -50,4 +81,69 @@ textarea.form-control {
 #contactForm {
 	width: 100%;
 
+}
+
+
+.full-form {
+	@extend %form-gradient;
+	background-color: #333 !important;
+	color: #FFF;
+	z-index: 4;
+
+	> .container > .row > .col-xs-12 > .toggle-item {
+		font-size: 32px;
+		float: right;
+		margin-top: 18px;
+	}
+
+	#contactForm {
+		margin-top: 30px;
+	}
+
+	.full-form--middle > .row > .contact-item-group {
+		position: relative;
+
+		.fa,
+		.phone-number {
+			position: absolute;
+		}
+		.fa {
+			font-size: 32px;
+			margin: 0 16px 0 0;
+		}
+
+		.phone-number {
+			font-size: 20px;
+			left: 32px;
+			top: 3px;
+		}
+	}
+}
+.full-form {
+	visibility: hidden;
+  	display: table;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	-webkit-transform: scale(0.85);
+	-ms-transform: scale(0.85);
+	transform: scale(0.85);
+	-webkit-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+
+.full-form--open {
+	visibility: visible;
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: large(1);
+}
+
+.full-form--middle {
+	display: table-cell;
+	vertical-align: middle;
 }

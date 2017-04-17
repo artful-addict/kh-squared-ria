@@ -1,4 +1,36 @@
-#contact {
+.contact-group {
+
+	> h2 {
+		font-size: 24px;
+		font-weight: 500;
+	}
+
+	> p {
+		font-size: 16px;
+		font-weight: 400;
+	}
+
+	> .contact-item-group {
+		position: relative;
+
+		.fa,
+		.phone-number {
+			position: absolute;
+		}
+		.fa {
+			font-size: 32px;
+			margin: 0 16px 0 0;
+		}
+
+		.phone-number {
+			font-size: 20px;
+			left: 32px;
+			top: 3px;
+		}
+	}
+}
+
+.direct-contact {
 	position: relative;
 	color: white;
 	font-size: 16px;

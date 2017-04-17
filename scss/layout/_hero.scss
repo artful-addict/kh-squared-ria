@@ -1,28 +1,91 @@
-#hero {
+%hero-settings {
 	height: 667px;
 	width: 100%;
 	display: block;
+	max-height: 667px;
+	overflow: hidden;
+	z-index: 0;
+}
+%hero-color-settings {
 	color: white;
 	background-color: #114877;
+}
 
-	@include respond-to('small') {
-		display: none;
-	}
-	@include respond-to('medium') {
-		display: none;
-	}
-	@include respond-to('large') {
-		display: none;
-	}
 
-	> .container > .row > .col-sm-12 {
-		text-align: center;
+%hero-gradient {
+	background:
+		linear-gradient(
+			to left,
+			rgba(32,117,170,1) 0%,
+			rgba(12,45,65, .7) 60%,
+			rgba(0,0,0,1) 100%
+		),
+		url('../../img/stock/background-@1x.jpg');
+	-ms-background-position-x: center;
+	-ms-background-position-y: bottom;
+		background-position: center bottom;
+	background-size: cover;
+	//-ms-behavior: url(background-size.min.htc);
+	background-position: 40% 60%;
+}
 
-		.logo {
-			margin: 259px auto;
-			display: block;
+#hero {
+	@extend %hero-settings;
+	@extend %hero-color-settings;
+	@extend %hero-gradient;
+
+	.brand-group {
+		margin: 0 auto 198px;
+		display: block;
+		width: 128px;
+		height: auto;
+		padding-top: 259px;
+
+		> .logo {
 			width: 128px;
 			height: auto;
+			display: block;
+			margin-bottom: 20px;
 		}
+
+		> .hb {
+			font-size: 22.5px;
+			text-align: center;
+		}
+
+		@include respond-to('small') {
+			display: none;
+		}
+		@include respond-to('medium') {
+			display: none;
+		}
+		@include respond-to('large') {
+			display: none;
+		}
+	}
+
+	.call-to-action {
+		margin: 0 auto 30px;
+		display: block;
+		width: 32px;
+		height: auto;
+		padding: 0;
+		font-size: 48px;
+		cursor: pointer;
+
+		> .fa {
+			margin: 0;
+			display: block;
+		}
+
+		@include respond-to('small') {
+			display: none;
+		}
+		@include respond-to('medium') {
+			display: none;
+		}
+		@include respond-to('large') {
+			display: none;
+		}		
 	}
 }

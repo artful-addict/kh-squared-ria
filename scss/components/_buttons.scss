@@ -1,0 +1,14 @@
+.btn-kh {
+	@include border-radius(50px);
+	background-color: white;
+	color: rgb(32,117,170);
+	font-weight: 500;
+	padding: 18px 45px;
+	margin-top: 32px;
+	float: right;
+	border: none;
+
+	&.btn-mobile {
+		width: 80%;
+	}
+}

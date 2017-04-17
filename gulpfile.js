@@ -11,6 +11,8 @@ var			gulp = require('gulp'),
 gulp.task("concatScripts", function() {
 	return gulp.src([
 					'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
+					'js/breakpoints.js',
+					'js/picturefill.min.js',
 					'js/main.js'])
 		.pipe(maps.init())
 		.pipe(concat('app.js'))

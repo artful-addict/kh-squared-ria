@@ -13,7 +13,7 @@
 	overflow-x: hidden; // Disable horizontal scroll
 }
 
-%navbar {
+%navigation {
 	width: 100%;
 	height: 60px;
 	display: block;
@@ -29,7 +29,175 @@
 	@include transition-duration(0.5s);
 	@include overlay-color($brand-primary, rgba($brand-primary, 0.9));
 }
+
 .navigation {
+	@extend %fixed-pos;
+	@extend %navigation;
+	@include transition-property(background-color);
+	@include transition-duration(0.4s);
+	@include transition-timing-function(ease);
+}
+
+#navbar {
+	display: block;
+	font-size: 24px;
+	color: white;
+
+	@include respond-to('small') {
+		display: none;
+	}
+	@include respond-to('medium') {
+		display: none;
+	}
+	@include respond-to('large') {
+		display: none;
+	}
+
+	.toggle-item,
+	.toggle-nav {
+		margin-top: 18px;
+		cursor: pointer;
+	}
+	.toggle-item {
+		float: right;
+	}
+	.toggle-nav {
+		float: left;
+	}
+}
+
+#desktop-nav {
+	display: none;
+
+	@include respond-to('small') {
+		display: block;
+	}
+	@include respond-to('medium') {
+		display: block;
+	}
+	@include respond-to('large') {
+		display: block;
+	}
+
+	.container > .brand-group {
+		display: inline-block;
+		width: auto;
+		height: 25.125px;
+		margin-top: 17.5px;
+		float: left;
+		color: white;
+
+		> .logo {
+			width: 32px;
+			height: auto;
+			display: inline-block;
+			margin-right: 16px;
+		}
+
+		> .hb {
+			display: inline-block;
+			text-align: left;
+		}
+
+		> .hb > h1 {
+			font-size: 16px;
+			margin: 0;
+		}
+	}
+
+	.container > .desktop-nav-menu {
+		float: right;
+		margin: 0;
+		display: inline-block;
+
+		> .nav-list {
+			list-style: none;
+			padding-left: 0;
+			margin-top: 18px;
+		}
+
+		> .nav-list > li {
+			@include transition-property(border-bottom);
+			@include transition-duration(0.3s);
+			@include transition-timing-function(ease);
+			display: inline-block;
+			margin: 0 16px;
+
+			&:hover {
+				border-bottom: 2px solid white;
+
+				> a {
+					color: white;
+					text-decoration: none;
+				}
+			}
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+
+			> a {
+				color: white;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.full-menu {
+	background-color: #333 !important;
+	color: #FFF;
+
+	.full-menu--middle > .row > .contact-item-group {
+		position: relative;
+
+		.fa,
+		.phone-number {
+			position: absolute;
+		}
+		.fa {
+			font-size: 32px;
+			margin: 0 16px 0 0;
+		}
+
+		.phone-number {
+			font-size: 20px;
+			left: 32px;
+			top: 3px;
+		}
+	}
+}
+.full-menu {
+	visibility: hidden;
+  	display: table;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	background-color: rgba(255, 255, 255, 0.92);
+	-webkit-transform: scale(0.85);
+	-ms-transform: scale(0.85);
+	transform: scale(0.85);
+	-webkit-transition: all 200ms ease-in-out;
+	transition: all 200ms ease-in-out;
+}
+
+.full-menu--open {
+	visibility: visible;
+	opacity: 1;
+	-webkit-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+}
+
+.full-menu--middle {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+/*.navigation {
 	@extend %fixed-pos;
 	@extend %navbar;
 	@include transition-property(background-color);
@@ -168,29 +336,31 @@
 			padding-right: auto;
 
 			li {
-					display: block;
-					margin: 0;
+				display: block;
+				margin: 0;
+				width: 100%;
+				height: 50px;
+				font-size: 20px;
+
+				a {
+					@include transition-property(background-color);
+					@include transition-duration(0.5s);
+					@include transition-timing-function(ease);
+					color: white;
+					background-color: transparent;
+					position: absolute;
 					width: 100%;
-					height: 50px;
-					font-size: 20px;
+					height: 100%;
+					text-decoration: none;
 
-					a {
-						@include transition-property(background-color);
-						@include transition-duration(0.5s);
-						@include transition-timing-function(ease);
-						color: white;
-						background-color: transparent;
-						position: absolute;
-						width: 100%;
-						height: 100%;
-						text-decoration: none;
-
-						&:hover {
-							background-color: darken(#333, 20%);
-						}
+					&:hover {
+						background-color: darken(#333, 20%);
 					}
 				}
+			}
 		}
 	}
-}
+} */
+
+
 
