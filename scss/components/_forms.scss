@@ -99,25 +99,6 @@ textarea.form-control {
 	#contactForm {
 		margin-top: 30px;
 	}
-
-	.full-form--middle > .row > .contact-item-group {
-		position: relative;
-
-		.fa,
-		.phone-number {
-			position: absolute;
-		}
-		.fa {
-			font-size: 32px;
-			margin: 0 16px 0 0;
-		}
-
-		.phone-number {
-			font-size: 20px;
-			left: 32px;
-			top: 3px;
-		}
-	}
 }
 .full-form {
 	visibility: hidden;
@@ -128,22 +109,35 @@ textarea.form-control {
 	height: 100%;
 	width: 100%;
 	opacity: 0;
-	-webkit-transform: scale(0.85);
-	-ms-transform: scale(0.85);
-	transform: scale(0.85);
-	-webkit-transition: all 200ms ease-in-out;
-	transition: all 200ms ease-in-out;
-}
+	-webkit-transition: all 0.5s ease;
+	   -moz-transition: all 0.5s ease;
+			transition: all 0.5s ease;
 
-.full-form--open {
-	visibility: visible;
-	opacity: 1;
-	-webkit-transform: scale(1);
-	-ms-transform: scale(1);
-	transform: large(1);
-}
+	&--open {
+		visibility: visible;
+		opacity: 1;
+	}
+	&--middle {
+		display: table-cell;
+		vertical-align: middle;
 
-.full-form--middle {
-	display: table-cell;
-	vertical-align: middle;
+		> .row > .contact-item-group {
+			position: relative;
+
+			.fa,
+			.phone-number {
+				position: absolute;
+			}
+			.fa {
+				font-size: 32px;
+				margin: 0 16px 0 0;
+			}
+
+			.phone-number {
+				font-size: 20px;
+				left: 32px;
+				top: 3px;
+			}
+		}
+	}
 }

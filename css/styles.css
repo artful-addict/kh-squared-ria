@@ -5858,7 +5858,7 @@ a {
   .btn-kh.btn-mobile {
     width: 80%; }
 
-.full-form {
+.full-form, .full-menu {
   background: linear-gradient(to left, #2075aa 0%, rgba(12, 45, 65, 0.7) 60%, black 100%), url("../../img/stock/background-@1x.jpg");
   -ms-background-position-x: center;
   -ms-background-position-y: bottom;
@@ -5966,18 +5966,6 @@ textarea.form-control {
     margin-top: 18px; }
   .full-form #contactForm {
     margin-top: 30px; }
-  .full-form .full-form--middle > .row > .contact-item-group {
-    position: relative; }
-    .full-form .full-form--middle > .row > .contact-item-group .fa,
-    .full-form .full-form--middle > .row > .contact-item-group .phone-number {
-      position: absolute; }
-    .full-form .full-form--middle > .row > .contact-item-group .fa {
-      font-size: 32px;
-      margin: 0 16px 0 0; }
-    .full-form .full-form--middle > .row > .contact-item-group .phone-number {
-      font-size: 20px;
-      left: 32px;
-      top: 3px; }
 
 .full-form {
   visibility: hidden;
@@ -5988,22 +5976,27 @@ textarea.form-control {
   height: 100%;
   width: 100%;
   opacity: 0;
-  -webkit-transform: scale(0.85);
-  -ms-transform: scale(0.85);
-  transform: scale(0.85);
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out; }
-
-.full-form--open {
-  visibility: visible;
-  opacity: 1;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: large(1); }
-
-.full-form--middle {
-  display: table-cell;
-  vertical-align: middle; }
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+  .full-form--open {
+    visibility: visible;
+    opacity: 1; }
+  .full-form--middle {
+    display: table-cell;
+    vertical-align: middle; }
+    .full-form--middle > .row > .contact-item-group {
+      position: relative; }
+      .full-form--middle > .row > .contact-item-group .fa,
+      .full-form--middle > .row > .contact-item-group .phone-number {
+        position: absolute; }
+      .full-form--middle > .row > .contact-item-group .fa {
+        font-size: 32px;
+        margin: 0 16px 0 0; }
+      .full-form--middle > .row > .contact-item-group .phone-number {
+        font-size: 20px;
+        left: 32px;
+        top: 3px; }
 
 .bg-img {
   height: 715px;
@@ -6143,19 +6136,12 @@ textarea.form-control {
 
 .full-menu {
   background-color: #333 !important;
-  color: #FFF; }
-  .full-menu .full-menu--middle > .row > .contact-item-group {
-    position: relative; }
-    .full-menu .full-menu--middle > .row > .contact-item-group .fa,
-    .full-menu .full-menu--middle > .row > .contact-item-group .phone-number {
-      position: absolute; }
-    .full-menu .full-menu--middle > .row > .contact-item-group .fa {
-      font-size: 32px;
-      margin: 0 16px 0 0; }
-    .full-menu .full-menu--middle > .row > .contact-item-group .phone-number {
-      font-size: 20px;
-      left: 32px;
-      top: 3px; }
+  color: #FFF;
+  z-index: 4; }
+  .full-menu > .container > .row > .col-xs-12 > .toggle-nav {
+    font-size: 32px;
+    float: left;
+    margin-top: 18px; }
 
 .full-menu {
   visibility: hidden;
@@ -6167,187 +6153,62 @@ textarea.form-control {
   width: 100%;
   opacity: 0;
   background-color: rgba(255, 255, 255, 0.92);
-  -webkit-transform: scale(0.85);
-  -ms-transform: scale(0.85);
-  transform: scale(0.85);
-  -webkit-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out; }
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
 
-.full-menu--open {
+.full-menu > .full-menu--open {
   visibility: visible;
-  opacity: 1;
-  -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1); }
+  opacity: 1; }
 
-.full-menu--middle {
+.full-menu > .full-menu--middle {
   display: table-cell;
   vertical-align: middle; }
+  .full-menu > .full-menu--middle > .row > .contact-item-group {
+    position: relative; }
+    .full-menu > .full-menu--middle > .row > .contact-item-group .fa,
+    .full-menu > .full-menu--middle > .row > .contact-item-group .phone-number {
+      position: absolute; }
+    .full-menu > .full-menu--middle > .row > .contact-item-group .fa {
+      font-size: 32px;
+      margin: 0 16px 0 0; }
+    .full-menu > .full-menu--middle > .row > .contact-item-group .phone-number {
+      font-size: 20px;
+      left: 32px;
+      top: 3px; }
 
-/*.navigation {
-	@extend %fixed-pos;
-	@extend %navbar;
-	@include transition-property(background-color);
-	@include transition-duration(0.5s);
-	@include transition-timing-function(ease);
-	background-color: transparent;
-	z-index: 2;
-}
+.full-menu > .full-menu > .nav-menu {
+  list-style: none;
+  padding-left: 0; }
+  .full-menu > .full-menu > .nav-menu > li {
+    display: block;
+    padding: 10px 20px;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    height: 50px;
+    width: 100%; }
+    .full-menu > .full-menu > .nav-menu > li > a {
+      -webkit-transition-property: background-color;
+      -moz-transition-property: background-color;
+      -o-transition-property: background-color;
+      transition-property: background-color;
+      -webkit-transition-duration: 0.5s;
+      -moz-transition-duration: 0.5s;
+      -o-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+      -webkit-transition-timing-function: ease;
+      -moz-transition-timing-function: ease;
+      -o-transition-timing-function: ease;
+      transition-timing-function: ease;
+      background-color: transparent;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      font-size: 20px;
+      font-weight: 400; }
+    .full-menu > .full-menu > .nav-menu > li:hover > a {
+      background-color: rgba(255, 255, 255, 0.4); }
 
-.navigation-brand > img.logo,
-.navigation-brand > h1.navigation-title {
-	display: none;
-
-	@include respond-to('small') {
-		display: inline-block;
-	}
-	@include respond-to('medium') {
-		display: inline-block;
-	}
-	@include respond-to('large') {
-		display: inline-block;
-	}
-}
-.navigation-title {
-	font-size: 20px;
-	color: white;
-	margin-bottom: 0;
-	margin-top: 15px;
-}
-.navigation-brand > img.logo {
-	width: 32px;
-	height: auto;
-	margin-top: 15px;
-	display: none;
-}
-
-.navigation-header {
-	display: block;
-
-	@include respond-to('small') {
-		display: block;
-	}
-	@include respond-to('medium') {
-		display: block;
-	}
-	@include respond-to('large') {
-		display: block;
-	}
-
-	.toggle-form {
-		font-size: 24px;
-		color: #FFF;
-		margin-top: 15px;
-		display: inline-block;
-	}
-
-	.toggle-nav {
-		
-		&[data-label="nav-menu"] {
-			float: left;
-		}
-
-		&[data-label="contact-form"] {
-			float: right;
-		}
-
-		@include respond-to('small') {
-			display: none;
-		}
-		@include respond-to('medium') {
-			display: none;
-		}
-		@include respond-to('large') {
-			display: none;
-		}
-	}
-
-	#nav-menu {
-		@include transition-property(display);
-		@include transition-duration(0.5s);
-		@include transition-timing-function(ease-in);
-		float: none;
-		display: none;
-		width: 100%;
-
-		&.open {
-			display: block;
-		}
-
-		@include respond-to('small') {
-			display: inline-block;
-			float: right;
-
-			ul {
-				padding-right: 0;
-				padding-left: auto;
-
-				li {
-					display: inline;
-					margin: 0 8px;
-				}
-			}
-		}
-		@include respond-to('medium') {
-			display: inline-block;
-			float: right;
-
-			ul {
-				padding-right: 0;
-				padding-left: auto;
-
-				li {
-					display: inline;
-					margin: 0 8px;
-				}
-			}
-		}
-		@include respond-to('large') {
-			display: inline-block;
-			float: right;
-
-			ul {
-				padding-right: 0;
-				padding-left: auto;
-
-				li {
-					display: inline;
-					margin: 0 8px;
-				}
-			}
-		}
-
-		ul {
-			list-style: none;
-			padding-left: 0;
-			padding-right: auto;
-
-			li {
-				display: block;
-				margin: 0;
-				width: 100%;
-				height: 50px;
-				font-size: 20px;
-
-				a {
-					@include transition-property(background-color);
-					@include transition-duration(0.5s);
-					@include transition-timing-function(ease);
-					color: white;
-					background-color: transparent;
-					position: absolute;
-					width: 100%;
-					height: 100%;
-					text-decoration: none;
-
-					&:hover {
-						background-color: darken(#333, 20%);
-					}
-				}
-			}
-		}
-	}
-} */
 #hero {
   height: 667px;
   width: 100%;
