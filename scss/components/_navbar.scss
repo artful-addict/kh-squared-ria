@@ -17,6 +17,7 @@
 	width: 100%;
 	height: 60px;
 	display: block;
+	z-index: 10;
 }
 
 %fixed-pos {
@@ -38,7 +39,7 @@
 	@include transition-timing-function(ease);
 }
 
-#navbar {
+.nav-bar {
 	display: block;
 	font-size: 24px;
 	color: white;
@@ -66,7 +67,7 @@
 	}
 }
 
-#desktop-nav {
+.desktop-nav {
 	display: none;
 
 	@include respond-to('small') {
@@ -123,6 +124,15 @@
 			display: inline-block;
 			margin: 0 16px;
 
+			&.active {
+				border-bottom: 2px solid white;
+
+				> a {
+					color: white;
+					text-decoration: none;
+				}
+			}
+
 			&:hover {
 				border-bottom: 2px solid white;
 
@@ -146,16 +156,17 @@
 
 .full-menu {
 	@extend %form-gradient;
-	background-color: #333 !important;
 	color: #FFF;
-	z-index: 4;
+	z-index: 15;
 
-	> .container > .row > .col-xs-12 > .toggle-nav {
-		font-size: 32px;
+	/* Closes the form */
+	.nav-bar > .container > .toggle-nav {
+		font-size: 24px;
 		float: left;
 		margin-top: 18px;
-	}
+	} 
 }
+
 .full-menu {
 	visibility: hidden;
   	display: table;
@@ -165,74 +176,83 @@
 	height: 100%;
 	width: 100%;
 	opacity: 0;
-	background-color: rgba(255, 255, 255, 0.92);
 	-webkit-transition: all 0.5s ease;
 	   -moz-transition: all 0.5s ease;
 			transition: all 0.5s ease;
-}
-.full-menu > .full-menu {
 
-	&--open {
-		visibility: visible;
-		opacity: 1;
+	.container > .row > .col-xs-12.nav-column {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
 	}
-
-	&--middle {
-		display: table-cell;
-		vertical-align: middle;
-
-		> .row > .contact-item-group {
-			position: relative;
-
-			.fa,
-			.phone-number {
-				position: absolute;
-			}
-			.fa {
-				font-size: 32px;
-				margin: 0 16px 0 0;
-			}
-
-			.phone-number {
-				font-size: 20px;
-				left: 32px;
-				top: 3px;
-			}
-		}
-	}
-
-	> .nav-menu {
+	.container > .row > .col-xs-12 > .nav-menu {
 		list-style: none;
 		padding-left: 0;
+		margin-top: 10px;
 
 		> li {
 			display: block;
-			padding: 10px 20px;
 			position: relative;
-			border-bottom: 1px solid rgba(white, .5);
 			height: 50px;
 			width: 100%;
+			border-bottom: white 1px solid;
 
-			> a {
-				@include transition-property(background-color);
-				@include transition-duration(0.5s);
-				@include transition-timing-function(ease);
-				background-color: transparent;
-				position: absolute;
-				height: 100%;
-				width: 100%;
-				font-size: 20px;
-				font-weight: 400;
+			&:first-of-type {
+				border-top: white 1px solid;
 			}
 
-			&:hover {
-				> a {
-					background-color: rgba(white, .4);
-				}
+			a {
+				@include transition-property(background-color);
+				@include transition-duration(0.3s);
+				@include transition-timing-function(ease);
+				positoin: aboslute;
+				width: 100%;
+				height: 100%;
+				display: block;
+				color: white;
+				padding-left: 15px;
+				padding-top: 12px;
+				text-decoration: none;
+				background-color: transparent;
+			}
+
+			&:hover > a {
+				color: white;
+				text-decoration: none;
+				background-color: rgba(white, .25);
+
 			}
 		}
+
+	}
+
+	.container > .row > .col-xs-12 > .contact-item-group {
+		position: relative;
+
+		.fa,
+		.phone-number {
+			position: absolute;
+		}
+		.fa {
+			font-size: 32px;
+			margin: 0 16px 0 0;
+		}
+
+		.phone-number {
+			font-size: 20px;
+			left: 32px;
+			top: 3px;
+		}
+	}
+	.container > .row > .col-xs-12 > a.social-media {
+		float: right;
+		position: relative;
+		display: inline-block;
+		color: white !important;
 	}
 }
-
+.full-menu--open {
+	visibility: visible;
+	opacity: 1;
+}
 
 

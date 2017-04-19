@@ -88,13 +88,14 @@ textarea.form-control {
 	@extend %form-gradient;
 	background-color: #333 !important;
 	color: #FFF;
-	z-index: 4;
+	z-index: 15;
 
-	> .container > .row > .col-xs-12 > .toggle-item {
-		font-size: 32px;
+	/* Closes the form */
+	.nav-bar > .container > .toggle-item {
+		font-size: 24px;
 		float: right;
 		margin-top: 18px;
-	}
+	} 
 
 	#contactForm {
 		margin-top: 30px;

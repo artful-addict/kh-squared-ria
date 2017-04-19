@@ -1,7 +1,17 @@
 #about {
 
 	p {
-		margin-top: 71px;
+		margin-top: 32px;
+
+		@include respond-to('small') {
+			margin-top: 71px;
+		}
+		@include respond-to('medium') {
+			margin-top: 71px;
+		}
+		@include respond-to('large') {
+			margin-top: 71px;
+		}
 	}
 
 	.portrait {
@@ -15,7 +25,7 @@
 	}
 
 	.portrait img {
-		width: 180px;
+		width: 200px;
 		height: auto;
 
 		@inlcude respond-to('small') {
@@ -29,6 +39,35 @@
 		@inlcude respond-to('large') {
 			width: 230px;
 			height: auto;
+		}
+	}
+
+	> .container > .row {
+
+		.call-to-top {
+			margin: 0 auto;
+			display: block;
+			width: 32px;
+			height: auto;
+			padding: 0;
+			font-size: 48px;
+			cursor: pointer;
+			color: #333;
+
+			> .fa {
+				margin: 0;
+				display: block;
+			}
+
+			@include respond-to('small') {
+				display: none;
+			}
+			@include respond-to('medium') {
+				display: none;
+			}
+			@include respond-to('large') {
+				display: none;
+			}		
 		}
 	}
 }
