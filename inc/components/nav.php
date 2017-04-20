@@ -281,7 +281,70 @@
 
                         <div class="col-sm-9">
 
-                            <form id="contactForm" action="/whatever" method="post">
+                            <?php
+    
+                                // Check for header injections
+                                function has_header_injection($str) {
+                                    return preg_match( "/[\r\n]/", $str );
+                                }
+            
+                                if (isset ($_POST['contact_submit'])) {
+                                    $firstName              = trim($_POST['firstName']);
+                                    $lastName               = trim($_POST['lastName']);
+                                    $phoneNumber            = $_POST['phoneNumber'];
+                                    $emailAddress           = trim($_POST['emailAddress']);
+                                    $subject                = $_POST['subject'];
+                                    $msg                    = $_POST['message'];
+            
+                                    // Check to see if $name or $email have header injections
+                                    if (has_header_injection($firstName) || has_header_injection($lastName) || has_header_injection($emailAddress)) {
+                                        die(); // If true, kill the script
+                                    }
+            
+                                    if ( !$firstName || !$lastName || !$emailAddress || !$msg ) {
+                                        echo '<div class="error-group"><p>All fields erquired. <a href="index.php">Go back and try again, please.</a>';
+                                        exit;
+                                    }
+            
+                                    // Add the recipient email to a variable
+                                    $to = "kevin@artfuladdict.com";
+            
+                                    // Create a subject
+                                    $subject = "KH Squared Inquiree";
+            
+                                    // Construct the message
+                                    $message = "Name: $firstName $lastName\r\n";
+                                    $message .= "Email: $emailAddress\r\n";
+                                    $message .= "Phone: $phoneNumber\r\n";
+                                    $message .= "Subject: $subject\r\n";
+                                    $message .= "Message: \r\n$msg";
+            
+                                    $message = wordwrap($message, 72);
+            
+                                    // Set the mail headers into a variable
+                                    $headers = "MIME-Version: 1.0\r\n";
+                                    $headers .= "Content-type: text/plain; charset=iso-8859-1\r\n";
+                                    $headers .= "From: $firstName <$emailAddress> \r\n";
+                                    $headers .= "X-Priority: 1\r\n";
+                                    $headers .= "X-MSMail-Priority: High\r\n\r\n";
+            
+                                    // Send the email
+                                    mail($to, $subject, $message, $headers);
+                            ?>
+            
+                            <!-- Show a success message after email has sent -->
+                            <div class="success-group">
+
+                                <h1>
+                                    <span class="fa fa-check-circle"></span>
+                                    Success!
+                                </h1>
+                                <h2>We will be with you shortly!</h2>
+                            </div> <!-- /.success-group -->
+            
+                            <?php } else { ?>
+
+                            <form id="contactForm" action="" method="post">
 
                                 <div class="row">
 
@@ -351,6 +414,7 @@
                                     </div>
                                 </div>
                             </form>
+                            <?php } ?>
                         </div>
                     </div> <!-- /.row -->
                 </div> <!-- /.container -->
