@@ -5983,6 +5983,14 @@ textarea.form-control {
   .full-form--open {
     visibility: visible;
     opacity: 1; }
+    .full-form--open .success-group {
+      text-align: center;
+      color: white; }
+      .full-form--open .success-group > h1 .fa {
+        font-size: 64px;
+        float: left; }
+      .full-form--open .success-group > h2 {
+        font-size: 20px; }
   .full-form--middle {
     display: table-cell;
     vertical-align: middle; }
@@ -6414,5 +6422,8 @@ textarea.form-control {
   margin-bottom: 0px;
   color: white;
   font-size: 12px; }
+
+.error {
+  color: red; }
 
 /*# sourceMappingURL=styles.css.map */
