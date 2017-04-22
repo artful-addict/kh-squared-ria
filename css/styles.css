@@ -5965,7 +5965,7 @@ textarea.form-control {
     font-size: 24px;
     float: right;
     margin-top: 18px; }
-  .full-form #contactForm {
+  .full-form .form-wrapper > #contactForm {
     margin-top: 30px; }
 
 .full-form {

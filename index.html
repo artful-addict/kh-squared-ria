@@ -45,10 +45,10 @@
 
                 <div class="container">
 
-                        <div class="toggle-nav">
+                    <div class="toggle-nav">
 
-                            <span class="fa fa-remove"></span>
-                        </div> <!-- /.full-form-close -->
+                        <span class="fa fa-remove"></span>
+                    </div> <!-- /.full-form-close -->
                 </div> <!-- /.container -->
             </div> <!-- /.navbar -->
 
@@ -96,10 +96,10 @@
 
                 <div class="container">
 
-                        <div class="toggle-item">
+                    <div class="toggle-item">
 
-                            <span class="fa fa-remove"></span>
-                        </div> <!-- /.full-form-close -->
+                        <span class="fa fa-remove"></span>
+                    </div> <!-- /.full-form-close -->
                 </div> <!-- /.container -->
             </div> <!-- /.navbar -->
 
@@ -107,71 +107,8 @@
 
                 <div class="row">
 
-                    <div class="col-xs-12">
+                    <div class="col-xs-12" id="mobile-form">
 
-                        <div class="form-wrapper">
-
-                            <form id="contactForm" action="/whatever" method="post">
-
-                                <div class="row">
-
-                                    <div class="col-xs-12">
-
-                                        <div class="form-group">
-
-                                            <label class="sr-only" for="firstName">First Name</label>
-                                            <input class="form-control" type="text" name="firstName" id="firstName" placeholder="First Name">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xs-12">
-
-                                        <div class="form-group">
-
-                                            <label class="sr-only" for="lastName">Last Name</label>
-                                            <input class="form-control" type="text" name="lastName" id="lastName" placeholder="Last Name">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xs-12">
-
-                                        <div class="form-group">
-
-                                            <label class="sr-only" for="phoneNumber">Phone&#40;Optional&#41;</label>
-                                            <input class="form-control" type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone (Optional)">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xs-12">
-
-                                        <div class="form-group">
-
-                                            <label class="sr-only" for="emailAddress">E&ndash;mail</label>
-                                            <input class="form-control" type="email" name="emailAddress" id="emailAddress" placeholder="E-mail">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xs-12">
-
-                                        <div class="form-group">
-
-                                            <label class="sr-only" for="subject">Subject</label>
-                                            <input class="form-control" type="text" name="subject" id="subject" placeholder="Subject">
-                                        </div>
-                                    </div>
-
-                                    <div class="col-xs-12">
-
-                                        <textarea class="form-control" id="message" name="message" placeholder="Your Message Here..." row="1"></textarea>
-                                    </div>
-
-                                    <div class="col-xs-12">
-
-                                        <input class="btn-kh btn-long" type="submit" value="Send">
-                                    </div>
-                                </div>
-                            </form>
-                        </div> <!-- /.form-wrapper -->
                     </div>
                 </div> <!-- /.row -->
             </div> <!-- /.container -->
@@ -258,11 +195,77 @@
                             </div> <!-- /.contact-group -->
                         </div>
 
-                        <div class="col-sm-9">
+                        <div class="col-sm-9" id="desktop-form">
 
-                            <div class="form-wrapper">
+                            <form id="contactForm" action="" method="post">
 
-                            </div> <!-- /.form-wrapper -->
+                                <div class="row">
+
+                                    <div class="col-xs-12 col-sm-6">
+
+                                        <div class="form-group">
+
+                                            <label class="sr-only" for="firstName">First Name</label>
+                                            <input class="form-control" type="text" name="firstName" id="firstName" placeholder="First Name">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6">
+
+                                        <div class="form-group">
+
+                                            <label class="sr-only" for="lastName">Last Name</label>
+                                            <input class="form-control" type="text" name="lastName" id="lastName" placeholder="Last Name">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-xs-12 col-sm-6">
+
+                                        <div class="form-group">
+
+                                            <label class="sr-only" for="phoneNumber">Phone&#40;Optional&#41;</label>
+                                            <input class="form-control" type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone (Optional)">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6">
+
+                                        <div class="form-group">
+
+                                            <label class="sr-only" for="emailAddress">E&ndash;mail</label>
+                                            <input class="form-control" type="email" name="emailAddress" id="emailAddress" placeholder="E-mail">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-xs-12 col-sm-12">
+
+                                        <div class="form-group">
+
+                                            <label class="sr-only" for="subject">Subject</label>
+                                            <input class="form-control" type="text" name="subject" id="subject" placeholder="Subject">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-xs-12 col-sm-12">
+
+                                        <textarea class="form-control" id="message" name="message" placeholder="Your Message Here..." row="1"></textarea>
+                                    </div>
+
+                                    <div class="col-xs-12">
+
+                                        <input class="btn-kh btn-long" type="submit" value="Send">
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div> <!-- /.row -->
                 </div> <!-- /.container -->
@@ -378,46 +381,51 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/app.min.js"></script>
     <script>
-        $(window).resize(function() {
-            if ($('html,body').width() <= 767) {
-                prependTo
-            } else {
-                if ($('html,body').width() >= 768) {
-                    appendTo
-                }
-            }
-        });
-
-        $('#contact-form').on('shown.bs.modal', function() {
-            $('#contact-formInput').focus()
-        });
-
+        
         $(document).ready(function () {
 
-
-            $('.toggle-nav').on('click', function() {
+            $('.toggle-nav').on('click', function () {
+                
                 $('.full-menu').toggleClass('full-menu--open');
             });
 
             $('.full-menu').on('click', function() {
+                
                 $('.full-menu').removeClass('full-menu--open');
             })
 
             $('.toggle-item').on('click', function() {
+                
                 $('.full-form').toggleClass('full-form--open');
             });
 
             $(".call-to-action").click(function() {
+                
                 $('html,body').animate({
+                    
                     scrollTop: $("#overview").offset().top},
                     'slow');
             });
 
             $(".call-to-top").click(function() {
+                
                 $('html,body').animate({
+                    
                     scrollTop: $("#hero").offset().top},
                     'slow');
             });
+        });
+
+        $(window).resize(function() {
+            var $form = $('#contactForm');
+
+            if ($('html,body').width() <= 767) {
+                $('#mobile-form').append($form);
+            } else {
+                if ($('html,body').width() >= 768) {
+                    $('#desktop-form').append($form);
+                }
+            }
         });
     </script>
   </body>

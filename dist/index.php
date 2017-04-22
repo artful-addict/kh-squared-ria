@@ -1,5 +1,4 @@
 <?php
-
     /// Page Structure
     // Arrays
 
@@ -10,9 +9,9 @@
     $siteAuthor = "Kevin Akins";
     $siteDescription = "KH-Squared RIA is a small company specializing in assisting their clients with registration of their investment advisory firms.";
     $siteKeywords = "kh-squared, business, consulting, keith her, koobmeng her, ria, investment advisor firm";
-
-    include('inc/layout/header.php');
 ?>
+
+    <?php include('inc/layout/header.php'); ?>
 
         <div class="full-menu"> 
 
@@ -82,67 +81,8 @@
 
                 <div class="row">
 
-                    <div class="col-xs-12">
-                        <form id="contactForm" action="/whatever" method="post">
+                    <div class="col-xs-12" id="mobile-form">
 
-                            <div class="row">
-
-                                <div class="col-xs-12">
-
-                                    <div class="form-group">
-
-                                        <label class="sr-only" for="firstName">First Name</label>
-                                        <input class="form-control" type="text" name="firstName" id="firstName" placeholder="First Name">
-                                    </div>
-                                </div>
-
-                                <div class="col-xs-12">
-
-                                    <div class="form-group">
-
-                                        <label class="sr-only" for="lastName">Last Name</label>
-                                        <input class="form-control" type="text" name="lastName" id="lastName" placeholder="Last Name">
-                                    </div>
-                                </div>
-
-                                <div class="col-xs-12">
-
-                                    <div class="form-group">
-
-                                        <label class="sr-only" for="phoneNumber">Phone&#40;Optional&#41;</label>
-                                        <input class="form-control" type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone (Optional)">
-                                    </div>
-                                </div>
-
-                                <div class="col-xs-12">
-
-                                    <div class="form-group">
-
-                                        <label class="sr-only" for="emailAddress">E&ndash;mail</label>
-                                        <input class="form-control" type="email" name="emailAddress" id="emailAddress" placeholder="E-mail">
-                                    </div>
-                                </div>
-
-                                <div class="col-xs-12">
-
-                                    <div class="form-group">
-
-                                        <label class="sr-only" for="subject">Subject</label>
-                                        <input class="form-control" type="text" name="subject" id="subject" placeholder="Subject">
-                                    </div>
-                                </div>
-
-                                <div class="col-xs-12">
-
-                                    <textarea class="form-control" id="message" name="message" placeholder="Your Message Here..." row="1"></textarea>
-                                </div>
-
-                                <div class="col-xs-12">
-
-                                    <input class="btn-kh btn-long" type="submit" value="Send">
-                                </div>
-                            </div>
-                        </form>
                     </div>
                 </div> <!-- /.row -->
             </div> <!-- /.container -->
@@ -229,89 +169,67 @@
                             </div> <!-- /.contact-group -->
                         </div>
 
-                        <div class="col-sm-9">
+                        <div class="col-sm-9" id="desktop-form">
 
-                            <form id="contactForm" action="<?= $_server['PHP_SELF']; ?>" method="post">
+                            <form id="contactForm" action="" method="post">
 
                                 <div class="row">
 
-                                    <div class="col-sm-6">
+                                    <div class="col-xs-12">
 
                                         <div class="form-group">
 
                                             <label class="sr-only" for="firstName">First Name</label>
-                                            <input class="form-control" type="text" name="firstName" id="firstName" placeholder="First Name" value="<?= $firstName ?>">
-                                            <span class="error"><?= $firstName_error ?></span>
+                                            <input class="form-control" type="text" name="firstName" id="firstName" placeholder="First Name">
                                         </div>
                                     </div>
 
-                                    <div class="col-sm-6">
+                                    <div class="col-xs-12">
 
                                         <div class="form-group">
 
                                             <label class="sr-only" for="lastName">Last Name</label>
-                                            <input class="form-control" type="text" name="lastName" id="lastName" placeholder="Last Name" value="<?= $lastName ?>">
-                                            <span class="error"><?= $latName_error ?></span>
+                                            <input class="form-control" type="text" name="lastName" id="lastName" placeholder="Last Name">
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="row">
-
-                                    <div class="col-sm-6">
+                                    <div class="col-xs-12">
 
                                         <div class="form-group">
+
                                             <label class="sr-only" for="phoneNumber">Phone&#40;Optional&#41;</label>
-                                            <input class="form-control" type="text" name="phoneNumber" id="phoneNumber" placeholder="Phone (Optional)" value="<?= $phoneNumber ?>">
-                                            <span class="error"><?= $phoneNumber_error ?></span>
+                                            <input class="form-control" type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone (Optional)">
                                         </div>
                                     </div>
 
-                                    <div class="col-sm-6">
+                                    <div class="col-xs-12">
 
                                         <div class="form-group">
+
                                             <label class="sr-only" for="emailAddress">E&ndash;mail</label>
-                                            <input class="form-control" type="email" name="emailAddress" id="emailAddress" placeholder="E-mail" value="<?= $emailAddress ?>">
-                                            <span class="error"><?= $emailAddress_error ?></span>
+                                            <input class="form-control" type="email" name="emailAddress" id="emailAddress" placeholder="E-mail">
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="row">
-
-                                    <div class="col-sm-12">
+                                    <div class="col-xs-12">
 
                                         <div class="form-group">
 
                                             <label class="sr-only" for="subject">Subject</label>
-                                            <input class="form-control" type="text" name="subject" id="subject" placeholder="Subject" value="<?= $subject ?>">
-                                            <span class="error"><?= $subject_error ?></span>
+                                            <input class="form-control" type="text" name="subject" id="subject" placeholder="Subject">
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="row">
+                                    <div class="col-xs-12">
 
-                                    <div class="col-sm-12">
+                                        <textarea class="form-control" id="message" name="message" placeholder="Your Message Here..." row="1"></textarea>
+                                    </div>
 
-                                        <textarea class="form-control" type="text" id="message" name="message" placeholder="Your Message Here..." row="1" value="<?= $message ?>"></textarea>
-                                        <span class="error"><?= $message_error ?></span>
+                                    <div class="col-xs-12">
+
+                                        <input class="btn-kh btn-long" type="submit" value="Send">
                                     </div>
                                 </div>
-
-                                <div class="row">
-
-                                    <div class="col-sm-12">
-
-                                        <input class="btn-kh" type="submit" value="Send">
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <!-- Show a success message after email has sent -->
-                                    <div class="success-group"><?= $success; ?></div> <!-- /.success-group -->
-                                </div>  
-
                             </form>
                         </div>
                     </div> <!-- /.row -->

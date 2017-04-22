@@ -51,7 +51,7 @@ gulp.task("clean", function() {
 });
 
 gulp.task("build", ['minifyScripts', 'compileSass'], function() {
-	return gulp.src(['css/styles.css', 'js/app.min.js', 'index.php', 'inc/**/*.php', 'img/**'], { base: './'})
+	return gulp.src(['css/styles.css', 'js/app.min.js', 'index.php', 'inc/**', 'img/**'], { base: './'})
 		.pipe(gulp.dest('dist'))
 });
 

@@ -1,4 +1,3 @@
-<?php include('inc/utils/form_process.php');?>
 <!DOCTYPE html>
 <html lang="en">
     <head>

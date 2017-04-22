@@ -1,4 +1,4 @@
-       <div class="footer">
+        <div class="footer">
 
             <div class="container">
 
@@ -15,6 +15,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/app.min.js"></script>
     <script>
+
+        $(window).resize(function() {
+            var $form = $('#contactForm');
+
+            if ($('html,body').width() <= 767) {
+                $form.insertAfter('#mobile-form');
+            } else {
+                if ($('html,body').width() >= 768) {
+                    $form.remove();
+                    $form.insertAfter('#desktop-form');
+                }
+            }
+        });
+
         $('#contact-form').on('shown.bs.modal', function() {
             $('#contact-formInput').focus()
         });
@@ -45,6 +59,8 @@
                     scrollTop: $("#hero").offset().top},
                     'slow');
             });
+
+
         });
     </script>
   </body>
