@@ -76,7 +76,7 @@
                     </div>
 
                     <div class="toggle-item">
-                        <span class="fa fa-envelope"></span>
+                        <a href="contact"><span class="fa fa-envelope"></span></a>
                     </div>
                 </div> <!-- /.container -->
             </div> <!-- /.navbar -->
