@@ -7,11 +7,8 @@
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title><?php echo $pageTitle; ?></title>
 
-        <meta name="author" content="<?php echo $siteAuthor; ?>">
-        <meta name="description" content="<?php echo $siteDescription; ?>">
-        <meta name="keywords" content="<?php echo $siteKeywords; ?>">
-
-        <link href="css/styles.css" rel="stylesheet">
+        <meta name="author" content="<?php echo $pageAuthor; ?>">
+        <link href="<?php echo $stylesPath; ?>" rel="stylesheet">
         <script src="https://use.fontawesome.com/dc56619f8a.js"></script>
 
         <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
@@ -41,4 +38,4 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
     </head>
-        <body>
+    <body>

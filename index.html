@@ -90,30 +90,6 @@
             </div> <!-- /.container -->
         </div> <!-- /.full-menu -->
 
-        <div class="full-form">
-
-            <div class="nav-bar">
-
-                <div class="container">
-
-                    <div class="toggle-item">
-
-                        <span class="fa fa-remove"></span>
-                    </div> <!-- /.full-form-close -->
-                </div> <!-- /.container -->
-            </div> <!-- /.navbar -->
-
-            <div class="container">
-
-                <div class="row">
-
-                    <div class="col-xs-12" id="mobile-form">
-
-                    </div>
-                </div> <!-- /.row -->
-            </div> <!-- /.container -->
-        </div> <!-- /.full-menu -->
-
         <div class="navigation">
 
             <div class="nav-bar">
@@ -418,7 +394,7 @@
 
         $(window).resize(function() {
             var $form = $('#contactForm');
-
+            $('#mobile-form').append($form);
             if ($('html,body').width() <= 767) {
                 $('#mobile-form').append($form);
             } else {

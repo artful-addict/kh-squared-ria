@@ -6423,6 +6423,91 @@ textarea.form-control {
   color: white;
   font-size: 12px; }
 
+#contact_page {
+  height: 100%;
+  width: 100%;
+  display: block;
+  max-height: 667px;
+  overflow: hidden;
+  z-index: 0; }
+
+#contact_page {
+  color: white;
+  background-color: #114877; }
+
+#contact_page {
+  background: linear-gradient(to left, #2075aa 0%, rgba(12, 45, 65, 0.7) 60%, black 100%), url("../../img/stock/background-@1x.jpg");
+  -ms-background-position-x: center;
+  -ms-background-position-y: bottom;
+  background-position: center bottom;
+  background-size: cover;
+  background-position: 40% 60%; }
+
+#contact_page .brand-group {
+  margin: 0 auto 198px;
+  display: block;
+  width: 128px;
+  height: auto;
+  padding-top: 259px; }
+  #contact_page .brand-group > .logo {
+    width: 128px;
+    height: auto;
+    display: block;
+    margin-bottom: 20px; }
+  #contact_page .brand-group > .hb {
+    font-size: 22.5px;
+    text-align: center; }
+  @media (min-width: 768px) {
+    #contact_page .brand-group {
+      display: none; } }
+  @media (min-width: 993px) {
+    #contact_page .brand-group {
+      display: none; } }
+  @media (min-width: 1200px) {
+    #contact_page .brand-group {
+      display: none; } }
+
+#success_page {
+  height: 100%;
+  width: 100%;
+  display: block;
+  max-height: 667px;
+  overflow: hidden;
+  z-index: 0; }
+
+#success_page {
+  color: white;
+  background-color: #114877; }
+
+#success_page {
+  background: linear-gradient(to left, #2075aa 0%, rgba(12, 45, 65, 0.7) 60%, black 100%), url("../../img/stock/background-@1x.jpg");
+  -ms-background-position-x: center;
+  -ms-background-position-y: bottom;
+  background-position: center bottom;
+  background-size: cover;
+  background-position: 40% 60%; }
+
+#success_page .success-group {
+  display: block;
+  width: 100%;
+  color: white; }
+  #success_page .success-group > .fa {
+    font-size: 32px; }
+  #success_page .success-group > p {
+    font-size: 20px; }
+
+#success_page .back-to-main {
+  margin: 0 auto 30px;
+  display: block;
+  width: 32px;
+  height: auto;
+  padding: 0;
+  font-size: 48px;
+  cursor: pointer; }
+  #success_page .back-to-main > .fa {
+    margin: 0;
+    display: block; }
+
 .error {
   color: red; }
 

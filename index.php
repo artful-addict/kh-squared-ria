@@ -1,17 +1,18 @@
 <?php
-    /// Page Structure
-    // Arrays
-
-    // Page title
+    // Page Title
     $pageTitle = "KH-Squared RIA";
+    // Page Author
+    $pageAuthor = "Kevin Akins";
+    // Page Description
 
-    // SEO
-    $siteAuthor = "Kevin Akins";
-    $siteDescription = "KH-Squared RIA is a small company specializing in assisting their clients with registration of their investment advisory firms.";
-    $siteKeywords = "kh-squared, business, consulting, keith her, koobmeng her, ria, investment advisor firm";
+    // Page Keywords
+
+    // Styles Path
+    $stylesPath = "css/styles.css";
+
 ?>
 
-    <?php include('inc/layout/header.php'); ?>
+<?php include('inc/layout/header.php'); ?>
 
         <div class="full-menu"> 
 
@@ -19,10 +20,10 @@
 
                 <div class="container">
 
-                        <div class="toggle-nav">
+                    <div class="toggle-nav">
 
-                            <span class="fa fa-remove"></span>
-                        </div> <!-- /.full-form-close -->
+                        <span class="fa fa-remove"></span>
+                    </div> <!-- /.full-form-close -->
                 </div> <!-- /.container -->
             </div> <!-- /.navbar -->
 
@@ -60,30 +61,6 @@
                             </span>
                         </a> <!-- /.social-media -->
                     </div> <!-- /.col-xs-12 -->
-                </div> <!-- /.row -->
-            </div> <!-- /.container -->
-        </div> <!-- /.full-menu -->
-
-        <div class="full-form">
-
-            <div class="nav-bar">
-
-                <div class="container">
-
-                        <div class="toggle-item">
-
-                            <span class="fa fa-remove"></span>
-                        </div> <!-- /.full-form-close -->
-                </div> <!-- /.container -->
-            </div> <!-- /.navbar -->
-
-            <div class="container">
-
-                <div class="row">
-
-                    <div class="col-xs-12" id="mobile-form">
-
-                    </div>
                 </div> <!-- /.row -->
             </div> <!-- /.container -->
         </div> <!-- /.full-menu -->
@@ -171,66 +148,130 @@
 
                         <div class="col-sm-9" id="desktop-form">
 
-                            <form id="contactForm" action="" method="post">
+                        		<?php
+    
+						                    // Check for header injections
+						                    function has_header_injection($str) {
+						                        return preg_match( "/[\r\n]/", $str );
+						                    }
 
-                                <div class="row">
+						                    if (isset ($_POST['contact_submit'])) {
+						                        $firstName 			= trim($_POST['firstName']);
+						                        $lastName 			= trim($_POST['lastName']);
+						                        $phoneNumber		= $_POST['phoneNumber'];
+						                        $emailAddress 	= trim($_POST['emailAdress']);
+						                        $subject 	= $_POST['subject'];
+						                        $msg 			= $_POST['message'];
 
-                                    <div class="col-xs-12">
+						                        // Check to see if $name or $email have header injections
+						                        if (has_header_injection($firstName) || has_header_injection($lastName) || has_header_injection($phoneNumber) || has_header_injection($email)) {
+						                            die(); // If true, kill the script
+						                        }
 
-                                        <div class="form-group">
+						                        if ( !$firstName || !$lastName || !$phoneNumber || !$email || !$msg ) {
+						                            echo '<div class="error-group"><h4 class="error">All fields required.</h4><a href="index.php" class="block">Go back and try again</a></div>';
+						                            exit;
+						                        }
 
-                                            <label class="sr-only" for="firstName">First Name</label>
-                                            <input class="form-control" type="text" name="firstName" id="firstName" placeholder="First Name">
-                                        </div>
-                                    </div>
+						                        // Add the recipient email to a variable
+						                        $to = "kevin@artfuladdict.com";
 
-                                    <div class="col-xs-12">
+						                        // Create a subject
+						                        $subject = "Inquiree Message";
 
-                                        <div class="form-group">
+						                        // Construct the message
+						                        $message = "First Name: $firstName\r\n";
+						                        $message .= "Last Name: $lastName\r\n";
+						                        $message .= "Phone: $phoneNumber\n\r";
+						                        $message .= "Email: $emailAddress\r\n";
+						                        $message .= "Subject: $subject\r\n";
+						                        $message .= "Message: \r\n$msg";
 
-                                            <label class="sr-only" for="lastName">Last Name</label>
-                                            <input class="form-control" type="text" name="lastName" id="lastName" placeholder="Last Name">
-                                        </div>
-                                    </div>
+						                        $message = wordwrap($message, 72);
 
-                                    <div class="col-xs-12">
+						                        // Set the mail headers into a variable
+						                        $headers = "MIME-Version: 1.0\r\n";
+						                        $headers .= "Content-type: text/plain; charset=iso-8859-1\r\n";
+						                        $headers .= "From: $firstName $lastName <$emailAddress> \r\n";
+						                        $headers .= "X-Priority: 1\r\n";
+						                        $headers .= "X-MSMail-Priority: High\r\n\r\n";
 
-                                        <div class="form-group">
+						                        // Send the email
+						                        mail($to, $subject, $message, $headers);
+						                ?>
 
-                                            <label class="sr-only" for="phoneNumber">Phone&#40;Optional&#41;</label>
-                                            <input class="form-control" type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone (Optional)">
-                                        </div>
-                                    </div>
+						                <?php } else { ?>
 
-                                    <div class="col-xs-12">
+		                            <form id="contactForm" action="success/success.php" method="post">
 
-                                        <div class="form-group">
+		                                <div class="row">
 
-                                            <label class="sr-only" for="emailAddress">E&ndash;mail</label>
-                                            <input class="form-control" type="email" name="emailAddress" id="emailAddress" placeholder="E-mail">
-                                        </div>
-                                    </div>
+		                                    <div class="col-xs-12 col-sm-6">
 
-                                    <div class="col-xs-12">
+		                                        <div class="form-group">
 
-                                        <div class="form-group">
+		                                            <label class="sr-only" for="firstName">First Name</label>
+		                                            <input class="form-control" type="text" name="firstName" id="firstName" placeholder="First Name">
+		                                        </div>
+		                                    </div>
 
-                                            <label class="sr-only" for="subject">Subject</label>
-                                            <input class="form-control" type="text" name="subject" id="subject" placeholder="Subject">
-                                        </div>
-                                    </div>
+		                                    <div class="col-xs-12 col-sm-6">
 
-                                    <div class="col-xs-12">
+		                                        <div class="form-group">
 
-                                        <textarea class="form-control" id="message" name="message" placeholder="Your Message Here..." row="1"></textarea>
-                                    </div>
+		                                            <label class="sr-only" for="lastName">Last Name</label>
+		                                            <input class="form-control" type="text" name="lastName" id="lastName" placeholder="Last Name">
+		                                        </div>
+		                                    </div>
+		                                </div>
 
-                                    <div class="col-xs-12">
+		                                <div class="row">
 
-                                        <input class="btn-kh btn-long" type="submit" value="Send">
-                                    </div>
-                                </div>
-                            </form>
+		                                    <div class="col-xs-12 col-sm-6">
+
+		                                        <div class="form-group">
+
+		                                            <label class="sr-only" for="phoneNumber">Phone&#40;Optional&#41;</label>
+		                                            <input class="form-control" type="tel" name="phoneNumber" id="phoneNumber" placeholder="Phone (Optional)">
+		                                        </div>
+		                                    </div>
+
+		                                    <div class="col-xs-12 col-sm-6">
+
+		                                        <div class="form-group">
+
+		                                            <label class="sr-only" for="emailAddress">E&ndash;mail</label>
+		                                            <input class="form-control" type="email" name="emailAddress" id="emailAddress" placeholder="E-mail">
+		                                        </div>
+		                                    </div>
+		                                </div>
+
+		                                <div class="row">
+
+		                                    <div class="col-xs-12 col-sm-12">
+
+		                                        <div class="form-group">
+
+		                                            <label class="sr-only" for="subject">Subject</label>
+		                                            <input class="form-control" type="text" name="subject" id="subject" placeholder="Subject">
+		                                        </div>
+		                                    </div>
+		                                </div>
+
+		                                <div class="row">
+
+		                                    <div class="col-xs-12 col-sm-12">
+
+		                                        <textarea class="form-control" id="message" name="message" placeholder="Your Message Here..." row="1"></textarea>
+		                                    </div>
+
+		                                    <div class="col-xs-12">
+
+		                                        <input class="btn-kh btn-long" type="submit" value="Send">
+		                                    </div>
+		                                </div>
+		                            </form>
+		                        <?php } ?>
                         </div>
                     </div> <!-- /.row -->
                 </div> <!-- /.container -->
@@ -329,4 +370,4 @@
             </div> <!-- /#about -->
         </div> <!-- /.tray -->
 
-<?php include('inc/footer.php'); ?>
+<?php include('inc/layout/footer.php'); ?>

@@ -1,0 +1,65 @@
+%success-settings {
+	height: 100%;
+	width: 100%;
+	display: block;
+	max-height: 667px;
+	overflow: hidden;
+	z-index: 0;
+}
+%success-color-settings {
+	color: white;
+	background-color: #114877;
+}
+
+
+%success-gradient {
+	background:
+		linear-gradient(
+			to left,
+			rgba(32,117,170,1) 0%,
+			rgba(12,45,65, .7) 60%,
+			rgba(0,0,0,1) 100%
+		),
+		url('../../img/stock/background-@1x.jpg');
+	-ms-background-position-x: center;
+	-ms-background-position-y: bottom;
+		background-position: center bottom;
+	background-size: cover;
+	//-ms-behavior: url(background-size.min.htc);
+	background-position: 40% 60%;
+}
+
+#success_page {
+	@extend %success-settings;
+	@extend %success-color-settings;
+	@extend %success-gradient;
+
+	.success-group {
+		display: block;
+		width: 100%;
+		color: white;
+
+		> .fa {
+			font-size: 32px;
+		}
+
+		> p {
+			font-size: 20px;
+		}
+	}
+
+	.back-to-main {
+		margin: 0 auto 30px;
+		display: block;
+		width: 32px;
+		height: auto;
+		padding: 0;
+		font-size: 48px;
+		cursor: pointer;
+
+		> .fa {
+			margin: 0;
+			display: block;
+		}
+	}
+}
