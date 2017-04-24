@@ -8,19 +8,19 @@
     // Page Keywords
 
     // Styles Path
-    $stylesPath = "../../css/styles.css";
+    $stylesPath = "css/styles.css";
 
 ?>
 
-<?php include('../inc/layout/header.php'); ?>
+<?php include('inc/layout/header.php'); ?>
 
 		<div id="success_page">
 
 				<div class="success-group">
 
-						<span class="fa fa-check-circle"></span>
-						<h2>Success!</h2>
-						<p>We will be with you shortly!</p>
+					<span class="fa fa-check-circle"></span>
+					<h2>Success!</h2>
+					<p>We will be with you shortly!</p>
 				</div> <!-- /.success-group -->
 
 				<div class="back-to-main">
@@ -29,4 +29,4 @@
       </div>
 		</div> <!-- /#success_page -->
 	
-<?php include('../inc/layout/footer.php'); ?>
+<?php include('inc/layout/footer.php'); ?>
