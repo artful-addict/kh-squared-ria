@@ -6072,12 +6072,17 @@ textarea.form-control {
   @media (min-width: 1200px) {
     .nav-bar {
       display: none; } }
-  .nav-bar .toggle-item,
+  .nav-bar .toggle-contact,
   .nav-bar .toggle-nav {
     margin-top: 18px;
     cursor: pointer; }
-  .nav-bar .toggle-item {
-    float: right; }
+  .nav-bar .toggle-contact {
+    float: right;
+    color: white;
+    text-decoration: none; }
+    .nav-bar .toggle-contact:hover {
+      color: white;
+      text-decoration: none; }
   .nav-bar .toggle-nav {
     float: left; }
 

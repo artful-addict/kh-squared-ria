@@ -6,9 +6,9 @@
             <span class="fa fa-bars"></span>
         </div>
 
-        <div class="toggle-item">
+        <a class="toggle-contact" href="success.php">
             <span class="fa fa-envelope"></span>
-        </div>
+        </a>
     </div> <!-- /.container -->
 </div> <!-- /.navbar -->
 

@@ -46,7 +46,7 @@
 			                        }
 
 			                        // Add the recipient email to a variable
-			                        $to = "kevin@artfuladdict.com";
+			                        $to = "kevinakins.designs@gmail.com";
 
 			                        // Create a subject
 			                        $subject = "Inquiree Message";
@@ -74,7 +74,7 @@
 
 			                <?php } else { ?>
 
-							<form id="contactForm" action="../success.php" method="post">
+							<form id="contactForm" action="success.php" method="post">
 
 			                    <div class="row">
 

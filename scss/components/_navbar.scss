@@ -54,13 +54,20 @@
 		display: none;
 	}
 
-	.toggle-item,
+	.toggle-contact,
 	.toggle-nav {
 		margin-top: 18px;
 		cursor: pointer;
 	}
-	.toggle-item {
+	.toggle-contact {
 		float: right;
+		color: white;
+		text-decoration: none;
+		&:hover {
+			color: white;
+			text-decoration: none;
+		}
+
 	}
 	.toggle-nav {
 		float: left;

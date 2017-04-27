@@ -78,9 +78,9 @@
                         <span class="fa fa-bars"></span>
                     </div>
 
-                    <div class="toggle-item">
-                        <a href="contact"><span class="fa fa-envelope"></span></a>
-                    </div>
+                    <a class="toggle-contact" href="contact.php">
+                        <span class="fa fa-envelope"></span>
+                    </a>
                 </div> <!-- /.container -->
             </div> <!-- /.navbar -->
 
