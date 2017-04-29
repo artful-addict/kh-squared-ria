@@ -130,6 +130,8 @@
 			@include transition-timing-function(ease);
 			display: inline-block;
 			margin: 0 16px;
+			border-bottom: none;
+			border-bottom-color: white;
 
 			&.active {
 				border-bottom: 2px solid white;

@@ -6137,7 +6137,9 @@ textarea.form-control {
       -o-transition-timing-function: ease;
       transition-timing-function: ease;
       display: inline-block;
-      margin: 0 16px; }
+      margin: 0 16px;
+      border-bottom: none;
+      border-bottom-color: white; }
       .desktop-nav .container > .desktop-nav-menu > .nav-list > li.active {
         border-bottom: 2px solid white; }
         .desktop-nav .container > .desktop-nav-menu > .nav-list > li.active > a {
