@@ -6137,7 +6137,11 @@ textarea.form-control {
       -o-transition-timing-function: ease;
       transition-timing-function: ease;
       display: inline-block;
-      margin: 0 16px; }
+      margin: 0 16px;
+      border-bottom: none;
+      border-bottom-color: white; }
+      .desktop-nav .container > .desktop-nav-menu > .nav-list > li:first-of-type {
+        display: none; }
       .desktop-nav .container > .desktop-nav-menu > .nav-list > li.active {
         border-bottom: 2px solid white; }
         .desktop-nav .container > .desktop-nav-menu > .nav-list > li.active > a {
@@ -6237,6 +6241,11 @@ textarea.form-control {
 .full-menu--open {
   visibility: visible;
   opacity: 1; }
+
+.navigation > .nav-bar > .container > .contact-link {
+  color: white;
+  float: right;
+  margin-top: 18px; }
 
 #hero {
   height: 667px;

@@ -28,11 +28,6 @@
                 $('.full-menu').removeClass('full-menu--open');
             })
 
-            $('.toggle-item').on('click', function() {
-                
-                $('.full-form').toggleClass('full-form--open');
-            });
-
             $(".call-to-action").click(function() {
                 
                 $('html,body').animate({
@@ -48,18 +43,6 @@
                     scrollTop: $("#hero").offset().top},
                     'slow');
             });
-        });
-
-        $(window).resize(function() {
-            var $form = $('#contactForm');
-
-            if ($('html,body').width() <= 767) {
-                $('#mobile-form').append($form);
-            } else {
-                if ($('html,body').width() >= 768) {
-                    $('#desktop-form').append($form);
-                }
-            }
         });
     </script>
   </body>

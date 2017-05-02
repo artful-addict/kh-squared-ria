@@ -133,6 +133,9 @@
 			border-bottom: none;
 			border-bottom-color: white;
 
+			&:first-of-type {
+				display: none;
+			}
 			&.active {
 				border-bottom: 2px solid white;
 
@@ -262,6 +265,11 @@
 .full-menu--open {
 	visibility: visible;
 	opacity: 1;
+}
+.navigation > .nav-bar > .container > .contact-link {
+	color: white;
+	float: right;
+	margin-top: 18px;
 }
 
 
