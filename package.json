@@ -8,17 +8,19 @@
     "bootstrap-sass": "^3.3.7",
     "compass-mixins": "^0.12.10",
     "del": "^2.2.2",
-    "gulp-rename": "^1.2.2",
+    "express": "^4.15.2",
+    "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.4.1",
     "gulp-uglify": "^2.1.0",
-    "gulp": "^3.9.1",
     "jquery": "^3.2.0"
   },
   "devDependencies": {
     "breakpoints-js": "^1.0.4",
     "grunt-php": "^1.5.1",
+    "jade-bootstrap": "^1.0.12",
     "lite-server": "^2.3.0",
     "skeleton-css": "^2.0.4"
   },
