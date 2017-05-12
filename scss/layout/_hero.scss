@@ -13,14 +13,7 @@
 
 
 %hero-gradient {
-	background:
-		linear-gradient(
-			to left,
-			rgba(32,117,170,1) 0%,
-			rgba(12,45,65, .7) 60%,
-			rgba(0,0,0,1) 100%
-		),
-		url('../../img/stock/background-@1x.jpg');
+	background: url('../../img/stock/AdobeStock_102383951.jpeg');
 	-ms-background-position-x: center;
 	-ms-background-position-y: bottom;
 		background-position: center bottom;
@@ -33,6 +26,8 @@
 	@extend %hero-settings;
 	@extend %hero-color-settings;
 	@extend %hero-gradient;
+
+	#contact { display: none; }
 
 	.brand-group {
 		margin: 0 auto 198px;
@@ -52,40 +47,58 @@
 			font-size: 22.5px;
 			text-align: center;
 		}
-
-		@include respond-to('small') {
-			display: none;
-		}
-		@include respond-to('medium') {
-			display: none;
-		}
-		@include respond-to('large') {
-			display: none;
-		}
 	}
 
 	.call-to-action {
-		margin: 0 auto 30px;
-		display: block;
-		width: 32px;
-		height: auto;
+		margin: 0 auto;
 		padding: 0;
-		font-size: 48px;
+		font-size: 24px;
 		cursor: pointer;
+		text-align: center;
 
-		> .fa {
-			margin: 0;
-			display: block;
-		}
+	}
+	.call-to-action.group {
+		width: 100%;
+		display: block;
 
-		@include respond-to('small') {
-			display: none;
+		.btn.btn-kh {
+			margin: auto auto 30px;
+			
+			&#scrollTo_services {
+				float: none;
+				display: block;
+
+				@include respond-to('small') {
+					float: none;
+					display: block;
+				}
+				@include respond-to('medium') {
+					float: none;
+					display: block;
+				}
+				@include respond-to('medium') {
+					float: none;
+					display: none;
+				}
+			}
+
+			&#to_Contactus {
+				float: none;
+				display: none;
+
+				@include respond-to('small') {
+					float: none;
+					display: none;
+				}
+				@include respond-to('medium') {
+					float: none;
+					display: block;
+				}
+				@include respond-to('small') {
+					float: none;
+					display: block;
+				}
+			}
 		}
-		@include respond-to('medium') {
-			display: none;
-		}
-		@include respond-to('large') {
-			display: none;
-		}		
 	}
 }

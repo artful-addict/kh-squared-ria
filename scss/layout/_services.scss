@@ -2,3 +2,16 @@
 	font-size: 20px;
 	font-weight: 500;
 }
+#services > .container > .row > .right-col {
+	padding-top: 0;
+
+	@include respond-to('small') {
+		padding-top: 0;
+	}
+	@include respond-to('medium') {
+		padding-top: 0;
+	}
+	@include respond-to('large') {
+		padding-top: 114px;
+	}
+}

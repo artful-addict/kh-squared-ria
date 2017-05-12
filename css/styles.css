@@ -5818,10 +5818,15 @@ html,
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 24px;
-  font-size: 16px; }
+  font-size: 16px;
+  color: #424242; }
 
 h1, h2 {
-  font-weight: 700; }
+  font-weight: 500; }
+
+h2 {
+  margin-top: 26px;
+  margin-bottom: 37px; }
 
 h3, h4, h5, h6 {
   font-weight: 500; }
@@ -5843,20 +5848,22 @@ a {
   text-decoration: underline; }
 
 .btn-kh {
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
-  border-radius: 50px;
-  background-color: white;
-  color: #2075aa;
-  font-weight: 500;
-  padding: 18px 45px;
-  margin-top: 32px;
-  float: right;
-  border: none; }
-  .btn-kh.btn-mobile {
-    width: 80%; }
+  color: #F5F5F5;
+  background-color: #2980B9;
+  font-weight: 400;
+  padding: 24px auto;
+  margin: auto auto 20px;
+  float: none;
+  border: none;
+  text-decoration: none;
+  width: 220px; }
+
+.btn-kh {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px; }
 
 .full-form, .full-menu {
   background: linear-gradient(to left, #2075aa 0%, rgba(12, 45, 65, 0.7) 60%, black 100%), url("../../img/stock/background-@1x.jpg");
@@ -6029,7 +6036,7 @@ textarea.form-control {
 .navigation {
   width: 100%;
   height: 60px;
-  display: block;
+  display: none;
   z-index: 10; }
 
 .navigation {
@@ -6260,12 +6267,15 @@ textarea.form-control {
   background-color: #114877; }
 
 #hero {
-  background: linear-gradient(to left, #2075aa 0%, rgba(12, 45, 65, 0.7) 60%, black 100%), url("../../img/stock/background-@1x.jpg");
+  background: url("../../img/stock/AdobeStock_102383951.jpeg");
   -ms-background-position-x: center;
   -ms-background-position-y: bottom;
   background-position: center bottom;
   background-size: cover;
   background-position: 40% 60%; }
+
+#hero #contact {
+  display: none; }
 
 #hero .brand-group {
   margin: 0 auto 198px;
@@ -6281,36 +6291,49 @@ textarea.form-control {
   #hero .brand-group > .hb {
     font-size: 22.5px;
     text-align: center; }
-  @media (min-width: 768px) {
-    #hero .brand-group {
-      display: none; } }
-  @media (min-width: 993px) {
-    #hero .brand-group {
-      display: none; } }
-  @media (min-width: 1200px) {
-    #hero .brand-group {
-      display: none; } }
 
 #hero .call-to-action {
-  margin: 0 auto 30px;
-  display: block;
-  width: 32px;
-  height: auto;
+  margin: 0 auto;
   padding: 0;
-  font-size: 48px;
-  cursor: pointer; }
-  #hero .call-to-action > .fa {
-    margin: 0;
-    display: block; }
-  @media (min-width: 768px) {
-    #hero .call-to-action {
-      display: none; } }
-  @media (min-width: 993px) {
-    #hero .call-to-action {
-      display: none; } }
-  @media (min-width: 1200px) {
-    #hero .call-to-action {
-      display: none; } }
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center; }
+
+#hero .call-to-action.group {
+  width: 100%;
+  display: block; }
+  #hero .call-to-action.group .btn.btn-kh {
+    margin: auto auto 30px; }
+    #hero .call-to-action.group .btn.btn-kh#scrollTo_services {
+      float: none;
+      display: block; }
+      @media (min-width: 768px) {
+        #hero .call-to-action.group .btn.btn-kh#scrollTo_services {
+          float: none;
+          display: block; } }
+      @media (min-width: 993px) {
+        #hero .call-to-action.group .btn.btn-kh#scrollTo_services {
+          float: none;
+          display: block; } }
+      @media (min-width: 993px) {
+        #hero .call-to-action.group .btn.btn-kh#scrollTo_services {
+          float: none;
+          display: none; } }
+    #hero .call-to-action.group .btn.btn-kh#to_Contactus {
+      float: none;
+      display: none; }
+      @media (min-width: 768px) {
+        #hero .call-to-action.group .btn.btn-kh#to_Contactus {
+          float: none;
+          display: none; } }
+      @media (min-width: 993px) {
+        #hero .call-to-action.group .btn.btn-kh#to_Contactus {
+          float: none;
+          display: block; } }
+      @media (min-width: 768px) {
+        #hero .call-to-action.group .btn.btn-kh#to_Contactus {
+          float: none;
+          display: block; } }
 
 .contact-group > h2 {
   font-size: 24px;
@@ -6355,6 +6378,18 @@ textarea.form-control {
 #services > .container > .row > .col-sm-12 > .special {
   font-size: 20px;
   font-weight: 500; }
+
+#services > .container > .row > .right-col {
+  padding-top: 0; }
+  @media (min-width: 768px) {
+    #services > .container > .row > .right-col {
+      padding-top: 0; } }
+  @media (min-width: 993px) {
+    #services > .container > .row > .right-col {
+      padding-top: 0; } }
+  @media (min-width: 1200px) {
+    #services > .container > .row > .right-col {
+      padding-top: 114px; } }
 
 #about p {
   margin-top: 32px; }
