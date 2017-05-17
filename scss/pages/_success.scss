@@ -1,65 +1,92 @@
-%success-settings {
-	height: 100%;
-	width: 100%;
-	display: block;
-	max-height: 667px;
-	overflow: hidden;
-	z-index: 0;
-}
-%success-color-settings {
-	color: white;
-	background-color: #114877;
-}
+.success-page {
+	background-color: #34495E;
 
-
-%success-gradient {
-	background:
-		linear-gradient(
-			to left,
-			rgba(32,117,170,1) 0%,
-			rgba(12,45,65, .7) 60%,
-			rgba(0,0,0,1) 100%
-		),
-		url('../../img/stock/background-@1x.jpg');
-	-ms-background-position-x: center;
-	-ms-background-position-y: bottom;
-		background-position: center bottom;
-	background-size: cover;
-	//-ms-behavior: url(background-size.min.htc);
-	background-position: 40% 60%;
-}
-
-#success_page {
-	@extend %success-settings;
-	@extend %success-color-settings;
-	@extend %success-gradient;
-
-	.success-group {
+	.page-header {
+		border-bottom: .5px solid rgba(#ccc, .15);
+		height: 48px;
 		display: block;
-		width: 100%;
-		color: white;
+		margin: 0;
+		display: none;
+		
+		a {
+			color: white;
+			text-decoration: none;
+			font-weight: 400;
+			position: relative;
 
-		> .fa {
-			font-size: 32px;
+			span.fa { font-size: 24px; }
+			span.text {
+				font-size: 16px;
+				position: absolute;
+				left: 30px;
+			}
 		}
 
-		> p {
-			font-size: 20px;
+		@include respond-to('small') {
+			display: none;
 		}
-	}
+		@include respond-to('medium') {
+			display: none;
+		}
+		@include respond-to('large') {
+			display: none;
+		}
 
-	.back-to-main {
-		margin: 0 auto 30px;
-		display: block;
-		width: 32px;
-		height: auto;
-		padding: 0;
-		font-size: 48px;
-		cursor: pointer;
-
-		> .fa {
-			margin: 0;
+		.call-back {
+			margin: 14px 0;
 			display: block;
 		}
+	}  
+
+	.brand-group {
+		margin: 0 auto 130px;
+		display: block;
+		width: 128px;
+		height: auto;
+		padding-top: 130px;
+		color: white;
+
+		> .logo {
+			width: 128px;
+			height: auto;
+			display: block;
+			margin-bottom: 20px;
+		}
+
+		> .hb {
+			font-size: 22.5px;
+			text-align: center;
+		}
 	}
+
+	.footer {
+		background-color: transparent;
+	}
+}
+
+.success-page p, .success-page h2 {
+	margin: 32px 0;
+	color: white;
+
+	@include respond-to('small') {
+		width: 80%;
+		margin: 32px 10%;
+	}
+	@include respond-to('medium') {
+		width: 70%;
+		margin: 32px 15%;
+	}
+	@include respond-to('large') {
+		width: 60%;
+		margin: 32px 20%;
+	}
+}
+
+.success-page h2 {
+	text-align: center;
+}
+
+.success-page .btn {
+	display: block;
+	margin: 16px auto;
 }

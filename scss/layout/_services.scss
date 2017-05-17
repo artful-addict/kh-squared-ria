@@ -2,3 +2,26 @@
 	font-size: 20px;
 	font-weight: 500;
 }
+#services > .container > .row > .right-col {
+	padding-top: 0;
+
+	@include respond-to('small') {
+		padding-top: 0;
+	}
+	@include respond-to('medium') {
+		padding-top: 0;
+	}
+	@include respond-to('large') {
+		padding-top: 114px;
+	}
+}
+
+#services .call-to-contact {
+
+	text-align: center;
+
+		.btn-kh {
+			margin: 24px auto 0;
+			display: block;
+		}
+}

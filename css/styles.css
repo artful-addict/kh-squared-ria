@@ -5818,10 +5818,15 @@ html,
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 24px;
-  font-size: 16px; }
+  font-size: 16px;
+  color: #424242; }
 
 h1, h2 {
-  font-weight: 700; }
+  font-weight: 500; }
+
+h2 {
+  margin-top: 26px;
+  margin-bottom: 37px; }
 
 h3, h4, h5, h6 {
   font-weight: 500; }
@@ -5843,20 +5848,70 @@ a {
   text-decoration: underline; }
 
 .btn-kh {
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
-  border-radius: 50px;
-  background-color: white;
-  color: #2075aa;
-  font-weight: 500;
-  padding: 18px 45px;
-  margin-top: 32px;
-  float: right;
-  border: none; }
-  .btn-kh.btn-mobile {
-    width: 80%; }
+  color: #F5F5F5;
+  background-color: #2980B9;
+  font-weight: 400;
+  padding: 24px auto;
+  margin: auto auto 20px;
+  float: none;
+  border: none;
+  text-decoration: none;
+  width: 220px; }
+
+.btn-kh-alt {
+  color: #333;
+  background-color: #f4f4f4;
+  font-weight: 400;
+  padding: 24px auto;
+  margin: auto auto 20px;
+  float: none;
+  border: none;
+  text-decoration: none;
+  width: 220px; }
+
+.btn-kh {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease; }
+  .btn-kh:hover {
+    color: #f5f5f5;
+    background-color: #20638f; }
+
+.btn-kh-alt {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-transition-property: background-color;
+  -moz-transition-property: background-color;
+  -o-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease; }
+  .btn-kh-alt:hover {
+    color: #333;
+    background-color: #dbdbdb; }
 
 .full-form, .full-menu {
   background: linear-gradient(to left, #2075aa 0%, rgba(12, 45, 65, 0.7) 60%, black 100%), url("../../img/stock/background-@1x.jpg");
@@ -5886,7 +5941,7 @@ a {
   -o-border-radius: 0px;
   border-radius: 0px;
   background-color: transparent;
-  color: white;
+  color: #424242;
   border: none;
   border-bottom: 1px solid white;
   padding: 38px 0 18px;
@@ -5958,7 +6013,7 @@ textarea.form-control {
 
 .full-form {
   background-color: #333 !important;
-  color: #FFF;
+  color: #424242;
   z-index: 15;
   /* Closes the form */ }
   .full-form .nav-bar > .container > .toggle-item {
@@ -6029,7 +6084,7 @@ textarea.form-control {
 .navigation {
   width: 100%;
   height: 60px;
-  display: block;
+  display: none;
   z-index: 10; }
 
 .navigation {
@@ -6260,12 +6315,15 @@ textarea.form-control {
   background-color: #114877; }
 
 #hero {
-  background: linear-gradient(to left, #2075aa 0%, rgba(12, 45, 65, 0.7) 60%, black 100%), url("../../img/stock/background-@1x.jpg");
+  background: url("../../img/stock/AdobeStock_102383951.jpeg");
   -ms-background-position-x: center;
   -ms-background-position-y: bottom;
   background-position: center bottom;
   background-size: cover;
   background-position: 40% 60%; }
+
+#hero #contact {
+  display: none; }
 
 #hero .brand-group {
   margin: 0 auto 198px;
@@ -6281,36 +6339,49 @@ textarea.form-control {
   #hero .brand-group > .hb {
     font-size: 22.5px;
     text-align: center; }
-  @media (min-width: 768px) {
-    #hero .brand-group {
-      display: none; } }
-  @media (min-width: 993px) {
-    #hero .brand-group {
-      display: none; } }
-  @media (min-width: 1200px) {
-    #hero .brand-group {
-      display: none; } }
 
 #hero .call-to-action {
-  margin: 0 auto 30px;
-  display: block;
-  width: 32px;
-  height: auto;
+  margin: 0 auto;
   padding: 0;
-  font-size: 48px;
-  cursor: pointer; }
-  #hero .call-to-action > .fa {
-    margin: 0;
-    display: block; }
-  @media (min-width: 768px) {
-    #hero .call-to-action {
-      display: none; } }
-  @media (min-width: 993px) {
-    #hero .call-to-action {
-      display: none; } }
-  @media (min-width: 1200px) {
-    #hero .call-to-action {
-      display: none; } }
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center; }
+
+#hero .call-to-action.group {
+  width: 100%;
+  display: block; }
+  #hero .call-to-action.group .btn.btn-kh {
+    margin: auto auto 30px; }
+    #hero .call-to-action.group .btn.btn-kh#scrollTo_services {
+      float: none;
+      display: block; }
+      @media (min-width: 768px) {
+        #hero .call-to-action.group .btn.btn-kh#scrollTo_services {
+          float: none;
+          display: block; } }
+      @media (min-width: 993px) {
+        #hero .call-to-action.group .btn.btn-kh#scrollTo_services {
+          float: none;
+          display: block; } }
+      @media (min-width: 993px) {
+        #hero .call-to-action.group .btn.btn-kh#scrollTo_services {
+          float: none;
+          display: none; } }
+    #hero .call-to-action.group .btn.btn-kh#to_Contactus {
+      float: none;
+      display: none; }
+      @media (min-width: 768px) {
+        #hero .call-to-action.group .btn.btn-kh#to_Contactus {
+          float: none;
+          display: none; } }
+      @media (min-width: 993px) {
+        #hero .call-to-action.group .btn.btn-kh#to_Contactus {
+          float: none;
+          display: block; } }
+      @media (min-width: 768px) {
+        #hero .call-to-action.group .btn.btn-kh#to_Contactus {
+          float: none;
+          display: block; } }
 
 .contact-group > h2 {
   font-size: 24px;
@@ -6356,25 +6427,51 @@ textarea.form-control {
   font-size: 20px;
   font-weight: 500; }
 
-#about p {
-  margin-top: 32px; }
+#services > .container > .row > .right-col {
+  padding-top: 0; }
   @media (min-width: 768px) {
-    #about p {
-      margin-top: 71px; } }
+    #services > .container > .row > .right-col {
+      padding-top: 0; } }
   @media (min-width: 993px) {
-    #about p {
-      margin-top: 71px; } }
+    #services > .container > .row > .right-col {
+      padding-top: 0; } }
   @media (min-width: 1200px) {
-    #about p {
-      margin-top: 71px; } }
+    #services > .container > .row > .right-col {
+      padding-top: 114px; } }
+
+#services .call-to-contact {
+  text-align: center; }
+  #services .call-to-contact .btn-kh {
+    margin: 24px auto 0;
+    display: block; }
+
+#about p {
+  margin-top: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 16px; }
 
 #about .portrait {
   display: block;
   margin: auto; }
 
-#about .portrait h2 {
+#about img {
+  padding-left: 20px;
+  padding-right: 20px; }
+
+#about h3 {
   text-align: center;
   font-size: 24px; }
+
+#about h4 {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2980B9;
+  font-style: italic;
+  margin-top: 12px;
+  padding-left: 20px;
+  padding-right: 20px; }
 
 #about .portrait img {
   width: 200px;
@@ -6437,90 +6534,190 @@ textarea.form-control {
   color: white;
   font-size: 12px; }
 
-#contact_page {
-  height: 100%;
-  width: 100%;
-  display: block;
-  max-height: 667px;
-  overflow: hidden;
-  z-index: 0; }
-
-#contact_page {
-  color: white;
-  background-color: #114877; }
-
-#contact_page {
-  background: linear-gradient(to left, #2075aa 0%, rgba(12, 45, 65, 0.7) 60%, black 100%), url("../../img/stock/background-@1x.jpg");
-  -ms-background-position-x: center;
-  -ms-background-position-y: bottom;
-  background-position: center bottom;
-  background-size: cover;
-  background-position: 40% 60%; }
-
-#contact_page .brand-group {
-  margin: 0 auto 198px;
-  display: block;
-  width: 128px;
-  height: auto;
-  padding-top: 259px; }
-  #contact_page .brand-group > .logo {
-    width: 128px;
-    height: auto;
+.contact-page {
+  background-color: #34495E; }
+  .contact-page .page-header {
+    border-bottom: 0.5px solid rgba(204, 204, 204, 0.15);
+    height: 48px;
     display: block;
-    margin-bottom: 20px; }
-  #contact_page .brand-group > .hb {
-    font-size: 22.5px;
-    text-align: center; }
-  @media (min-width: 768px) {
-    #contact_page .brand-group {
-      display: none; } }
-  @media (min-width: 993px) {
-    #contact_page .brand-group {
-      display: none; } }
-  @media (min-width: 1200px) {
-    #contact_page .brand-group {
-      display: none; } }
-
-#success_page {
-  height: 100%;
-  width: 100%;
-  display: block;
-  max-height: 667px;
-  overflow: hidden;
-  z-index: 0; }
-
-#success_page {
-  color: white;
-  background-color: #114877; }
-
-#success_page {
-  background: linear-gradient(to left, #2075aa 0%, rgba(12, 45, 65, 0.7) 60%, black 100%), url("../../img/stock/background-@1x.jpg");
-  -ms-background-position-x: center;
-  -ms-background-position-y: bottom;
-  background-position: center bottom;
-  background-size: cover;
-  background-position: 40% 60%; }
-
-#success_page .success-group {
-  display: block;
-  width: 100%;
-  color: white; }
-  #success_page .success-group > .fa {
-    font-size: 32px; }
-  #success_page .success-group > p {
-    font-size: 20px; }
-
-#success_page .back-to-main {
-  margin: 0 auto 30px;
-  display: block;
-  width: 32px;
-  height: auto;
-  padding: 0;
-  font-size: 48px;
-  cursor: pointer; }
-  #success_page .back-to-main > .fa {
     margin: 0;
     display: block; }
+    .contact-page .page-header a {
+      color: white;
+      text-decoration: none;
+      font-weight: 400;
+      position: relative; }
+      .contact-page .page-header a span.fa {
+        font-size: 24px; }
+      .contact-page .page-header a span.text {
+        font-size: 16px;
+        position: absolute;
+        left: 30px; }
+    @media (min-width: 768px) {
+      .contact-page .page-header {
+        display: none; } }
+    @media (min-width: 993px) {
+      .contact-page .page-header {
+        display: none; } }
+    @media (min-width: 1200px) {
+      .contact-page .page-header {
+        display: none; } }
+    .contact-page .page-header .call-back {
+      margin: 14px 0;
+      display: block; }
+  .contact-page .btn-kh-alt {
+    margin: -16px auto;
+    display: block;
+    font-weight: 500; }
+  .contact-page .brand-group {
+    margin: 0 auto 130px;
+    display: block;
+    width: 128px;
+    height: auto;
+    padding-top: 130px;
+    color: white; }
+    .contact-page .brand-group > .logo {
+      width: 128px;
+      height: auto;
+      display: block;
+      margin-bottom: 20px; }
+    .contact-page .brand-group > .hb {
+      font-size: 22.5px;
+      text-align: center; }
+  .contact-page .footer {
+    background-color: transparent; }
+
+.contact-page p, .contact-page h2 {
+  margin: 32px 0;
+  color: white; }
+  @media (min-width: 768px) {
+    .contact-page p, .contact-page h2 {
+      width: 80%;
+      margin: 32px 10%; } }
+  @media (min-width: 993px) {
+    .contact-page p, .contact-page h2 {
+      width: 70%;
+      margin: 32px 15%; } }
+  @media (min-width: 1200px) {
+    .contact-page p, .contact-page h2 {
+      width: 60%;
+      margin: 32px 20%; } }
+
+form {
+  width: 100%;
+  margin: 32px 0; }
+  form input {
+    color: #424242; }
+  @media (min-width: 768px) {
+    form {
+      width: 80%;
+      margin: 32px 10%; } }
+  @media (min-width: 993px) {
+    form {
+      width: 70%;
+      margin: 32px 15%; } }
+  @media (min-width: 1200px) {
+    form {
+      width: 60%;
+      margin: 32px 20%; } }
+  form .form-group > .form-control {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    border-radius: 6px;
+    background-color: white;
+    border: #999 1px solid;
+    padding: 14px 10px 14px;
+    font-weight: 400;
+    color: #424242; }
+    form .form-group > .form-control::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: #999; }
+    form .form-group > .form-control::-moz-placeholder {
+      /* Firefox 19+ */
+      color: #999; }
+    form .form-group > .form-control:-ms-input-placeholder {
+      /* IE 10+ */
+      color: #999; }
+    form .form-group > .form-control:-moz-placeholder {
+      /* Firefox 18- */
+      color: #999; }
+  form .btn {
+    margin: 32px auto;
+    display: block; }
+
+.success-page {
+  background-color: #34495E; }
+  .success-page .page-header {
+    border-bottom: 0.5px solid rgba(204, 204, 204, 0.15);
+    height: 48px;
+    display: block;
+    margin: 0;
+    display: none; }
+    .success-page .page-header a {
+      color: white;
+      text-decoration: none;
+      font-weight: 400;
+      position: relative; }
+      .success-page .page-header a span.fa {
+        font-size: 24px; }
+      .success-page .page-header a span.text {
+        font-size: 16px;
+        position: absolute;
+        left: 30px; }
+    @media (min-width: 768px) {
+      .success-page .page-header {
+        display: none; } }
+    @media (min-width: 993px) {
+      .success-page .page-header {
+        display: none; } }
+    @media (min-width: 1200px) {
+      .success-page .page-header {
+        display: none; } }
+    .success-page .page-header .call-back {
+      margin: 14px 0;
+      display: block; }
+  .success-page .brand-group {
+    margin: 0 auto 130px;
+    display: block;
+    width: 128px;
+    height: auto;
+    padding-top: 130px;
+    color: white; }
+    .success-page .brand-group > .logo {
+      width: 128px;
+      height: auto;
+      display: block;
+      margin-bottom: 20px; }
+    .success-page .brand-group > .hb {
+      font-size: 22.5px;
+      text-align: center; }
+  .success-page .footer {
+    background-color: transparent; }
+
+.success-page p, .success-page h2 {
+  margin: 32px 0;
+  color: white; }
+  @media (min-width: 768px) {
+    .success-page p, .success-page h2 {
+      width: 80%;
+      margin: 32px 10%; } }
+  @media (min-width: 993px) {
+    .success-page p, .success-page h2 {
+      width: 70%;
+      margin: 32px 15%; } }
+  @media (min-width: 1200px) {
+    .success-page p, .success-page h2 {
+      width: 60%;
+      margin: 32px 20%; } }
+
+.success-page h2 {
+  text-align: center; }
+
+.success-page .btn {
+  display: block;
+  margin: 16px auto; }
 
 .error {
   color: red; }

@@ -32,7 +32,7 @@
 .form-control {
 	@include border-radius(0px);
 	background-color: transparent;
-	color: white;
+	color: #424242;
 	border: none;
 	border-bottom: 1px solid white;
 	padding: 38px 0 18px;
@@ -87,7 +87,7 @@ textarea.form-control {
 .full-form {
 	@extend %form-gradient;
 	background-color: #333 !important;
-	color: #FFF;
+	color: #424242;
 	z-index: 15;
 
 	/* Closes the form */

@@ -1,45 +1,58 @@
-%contact-settings {
-	height: 100%;
-	width: 100%;
-	display: block;
-	max-height: 667px;
-	overflow: hidden;
-	z-index: 0;
-}
-%contact-color-settings {
-	color: white;
-	background-color: #114877;
-}
+.contact-page {
+	background-color: #34495E;
+
+	.page-header {
+		border-bottom: .5px solid rgba(#ccc, .15);
+		height: 48px;
+		display: block;
+		margin: 0;
+		display: block;
+		
+		a {
+			color: white;
+			text-decoration: none;
+			font-weight: 400;
+			position: relative;
+
+			span.fa { font-size: 24px; }
+			span.text {
+				font-size: 16px;
+				position: absolute;
+				left: 30px;
+			}
+		}
+
+		@include respond-to('small') {
+			display: none;
+		}
+		@include respond-to('medium') {
+			display: none;
+		}
+		@include respond-to('large') {
+			display: none;
+		}
+
+		.call-back {
+			margin: 14px 0;
+			display: block;
+		}
 
 
-%contact-gradient {
-	background:
-		linear-gradient(
-			to left,
-			rgba(32,117,170,1) 0%,
-			rgba(12,45,65, .7) 60%,
-			rgba(0,0,0,1) 100%
-		),
-		url('../../img/stock/background-@1x.jpg');
-	-ms-background-position-x: center;
-	-ms-background-position-y: bottom;
-		background-position: center bottom;
-	background-size: cover;
-	//-ms-behavior: url(background-size.min.htc);
-	background-position: 40% 60%;
-}
+	} 
 
-#contact_page {
-	@extend %contact-settings;
-	@extend %contact-color-settings;
-	@extend %contact-gradient;
+	.btn-kh-alt {
+		margin: -16px auto;
+		display: block;
+		font-weight: 500;
+	}
 
 	.brand-group {
-		margin: 0 auto 198px;
+		margin: 0 auto 130px;
 		display: block;
 		width: 128px;
 		height: auto;
-		padding-top: 259px;
+		padding-top: 130px;
+		color: white;
 
 		> .logo {
 			width: 128px;
@@ -52,15 +65,74 @@
 			font-size: 22.5px;
 			text-align: center;
 		}
+	}
 
-		@include respond-to('small') {
-			display: none;
+	.footer {
+		background-color: transparent;
+	}
+}
+
+.contact-page p, .contact-page h2 {
+	margin: 32px 0;
+	color: white;
+
+	@include respond-to('small') {
+		width: 80%;
+		margin: 32px 10%;
+	}
+	@include respond-to('medium') {
+		width: 70%;
+		margin: 32px 15%;
+	}
+	@include respond-to('large') {
+		width: 60%;
+		margin: 32px 20%;
+	}
+}
+
+form {
+	width: 100%;
+	margin: 32px 0;
+
+	input { color: #424242; }
+
+	@include respond-to('small') {
+		width: 80%;
+		margin: 32px 10%;
+	}
+	@include respond-to('medium') {
+		width: 70%;
+		margin: 32px 15%;
+	}
+	@include respond-to('large') {
+		width: 60%;
+		margin: 32px 20%;
+	}
+
+	.form-group > .form-control {
+		@include border-radius(6px);
+		background-color: white;
+		border: #999 1px solid;
+		padding: 14px 10px 14px;
+		font-weight: 400;
+		color: #424242;
+
+		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	    	color: #999;
 		}
-		@include respond-to('medium') {
-			display: none;
+		&::-moz-placeholder { /* Firefox 19+ */
+		  	color:#999;
 		}
-		@include respond-to('large') {
-			display: none;
+		&:-ms-input-placeholder { /* IE 10+ */
+		  	color:#999;
 		}
+		&:-moz-placeholder { /* Firefox 18- */
+		  	color:#999;
+		}
+	}
+
+	.btn {
+		margin: 32px auto;
+		display: block;
 	}
 }
