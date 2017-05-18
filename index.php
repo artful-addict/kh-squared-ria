@@ -97,7 +97,7 @@
 
                     <div class="call-to-contact">
 
-                        <a class="btn btn-kh" href="contact.html">Contact Us</a>
+                        <a class="btn btn-kh" href="contact.php">Contact Us</a>
                     </div>
                 </div> <!-- /.row -->
             </div> <!-- /.container -->

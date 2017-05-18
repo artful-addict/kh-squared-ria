@@ -1,8 +1,10 @@
-<?php include('inc/header.php'); ?>
+<?php
+    define("TITLE", "KH-Squared RIA | Contact");
+    include('inc/header.php');
+?>
 
 <?php
 	// Variables
-	$pageTitle = "KH-Squared RIA | Contact";
 	$metaAuthor = '<meta name="author" content="Kevin Akins">';
     $metaKeyWords = '<meta name="keywords" content="KH-Squared RIA, Business Consulting, Sacramento, California, Kee Her, Koobmeng Her"';
 	$favicons = '
@@ -79,7 +81,7 @@
 
             <div class="col-sm-12">
 
-                <form action="success.html" method="POST">
+                <form action="success.php" method="POST">
                     
                     <div class="form-group">
 
