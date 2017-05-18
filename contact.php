@@ -73,7 +73,7 @@
                         $msg = $_POST['message'];
 
                         // Check to see if name or email have header injections
-                        if (has_header_injections($name) || has_header_injections($email) || has_header_injections($phone)) {
+                        if (has_header_injections($name) || has_header_injections($email)) {
                             die(); // If true, kill the script
                         }
 
