@@ -26,13 +26,13 @@
             $('.full-menu').on('click', function() {
                 
                 $('.full-menu').removeClass('full-menu--open');
-            })
+            });
 
-            $(".call-to-action").click(function() {
+            $("#scrollTo_services").click(function() {
                 
                 $('html,body').animate({
                     
-                    scrollTop: $("#overview").offset().top},
+                    scrollTop: $("#services").offset().top},
                     'slow');
             });
 
