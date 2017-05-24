@@ -15,7 +15,7 @@
 
                         <div class="call-back">
 
-                            <a href="index.html">
+                            <a href="index.php">
                                 <span class="fa fa-chevron-circle-left"></span> <span class="text">Back</span>
                             </a>
                         </div> <!-- /.call-back -->

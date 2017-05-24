@@ -73,7 +73,7 @@
 
                 <div class="row">
 
-                    <div class="call-to-contact">
+                    <div class="call-to-contact hidden-md hidden-lg">
 
                         <a class="btn btn-kh" href="contact.php">Contact Us</a>
                     </div>
