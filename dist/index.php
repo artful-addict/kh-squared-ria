@@ -20,7 +20,7 @@
 
             <a id="scrollTo_services" class="btn btn-kh" href="#services">See Our Services</a>
 
-            <a id="to_contactus" href="contact.php" class="btn btn-kh">Contact Us</a>
+            <a id="to_contactus" href="contact.php"><button class="btn btn-kh">Contact Us</button></a>
         </div>
     </div> <!-- /#hero -->
 
@@ -75,7 +75,7 @@
 
                     <div class="call-to-contact hidden-md hidden-lg">
 
-                        <a class="btn btn-kh" href="contact.php">Contact Us</a>
+                        <a href="contact.php"><button class="btn btn-kh">Contact Us</button></a>
                     </div>
                 </div> <!-- /.row -->
             </div> <!-- /.container -->
