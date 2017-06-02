@@ -66,7 +66,7 @@
                 }
                 
                 
-                if (isset($_POST['contact_submit'])) {
+                if (isset ($_POST['contact_submit'])) {
                     
                     // Assign trimmed form data to variables
                     // Note that the value within the $_POST array is looking for the HTML "name" attribute, i.e. name="email"
@@ -77,10 +77,9 @@
                 
                     // Check to see if $name or $email have header injections
                     if (has_header_injection($name) || has_header_injection($email)) {
-                        
                         die(); // If true, kill the script
                         
-                    }
+                
                     
                     if (!$name || !$email || !$msg) {
                         echo '<h4 class="error">All fields required.</h4><a href="contact.php" class="button block">Go back and try again</a>';
@@ -88,7 +87,7 @@
                     }
                     
                     // Add the recipient email to a variable
-                    $to = "kevin@artfuladdict.com";
+                    $to = "akinskevin86@gmail.com";
                     
                     // Create a subject
                     $subject = "$name sent a message via your contact form";
@@ -96,7 +95,7 @@
                     // Construct the message
                     $message .= "Name: $name\r\n";
                     $message .= "Email: $email\r\n";
-                    $message .= "Phone: $phone\r\n\r\n"
+                    $message .= "Phone: $phone\r\n\r\n";
                     $message .= "Message:\r\n$msg";
                     
                     // If the subscribe checkbox was checked
@@ -127,7 +126,7 @@
                     } else {
                 ?>
 
-                <form action="success.php" method="POST">
+                <form method="POST" action="success.php">
                     
                     <div class="form-group">
 
@@ -152,7 +151,7 @@
                         <textarea class="form-control" name="message" id="message" rows="3" placeholder="Message"></textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-kh">Send Message</button>
+                    <input type="submit" class="btn btn-kh" name="submit" value="Send Message">
 
                 </form> <!-- form -->
 
