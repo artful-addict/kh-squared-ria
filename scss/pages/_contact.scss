@@ -38,10 +38,10 @@
 		}
 
 
-	} 
+	}
 
-	.btn-kh-alt {
-		margin: -16px auto;
+	form .btn-kh-alt, .btn-kh {
+		margin: 16px auto;
 		display: block;
 		font-weight: 500;
 	}
@@ -72,6 +72,7 @@
 	}
 }
 
+
 .contact-page p, .contact-page h2 {
 	margin: 32px 0;
 	color: white;
@@ -87,6 +88,17 @@
 	@include respond-to('large') {
 		width: 60%;
 		margin: 32px 20%;
+	}
+}
+
+.contact-form > .container > .row > .col-sm-12 > .success {
+
+	h2 { text-align: left; }
+
+	p { text-align: left; }
+	
+	a {
+		text-align: center;
 	}
 }
 

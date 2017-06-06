@@ -6565,8 +6565,8 @@ textarea.form-control {
     .contact-page .page-header .call-back {
       margin: 14px 0;
       display: block; }
-  .contact-page .btn-kh-alt {
-    margin: -16px auto;
+  .contact-page form .btn-kh-alt, .contact-page .btn-kh {
+    margin: 16px auto;
     display: block;
     font-weight: 500; }
   .contact-page .brand-group {
@@ -6602,6 +6602,15 @@ textarea.form-control {
     .contact-page p, .contact-page h2 {
       width: 60%;
       margin: 32px 20%; } }
+
+.contact-form > .container > .row > .col-sm-12 > .success h2 {
+  text-align: left; }
+
+.contact-form > .container > .row > .col-sm-12 > .success p {
+  text-align: left; }
+
+.contact-form > .container > .row > .col-sm-12 > .success a {
+  text-align: center; }
 
 form {
   width: 100%;
